@@ -1,0 +1,301 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Florian Silva",
+    "label": "Big Data Devops",
+    "image": "",
+    "email": "florian.silva@hotmail.fr",
+    "phone": "+33777390306",
+    "url": "",
+    "summary": "Computer scientist since I removed a malware on my first computer when I was young. I started being interested in infrastructure and  I love sport and am always ready for a session, I'm focus on climbing since 5 year, the mood in the community is so positive.",
+    "location": {
+      "countryCode": "FR",
+      "address": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "silvaflorian",
+        "url": "https://www.linkedin.com/in/silvaflorian/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "CANAL+ Group",
+      "position": "System engineer Devops / SRE",
+      "startDate": "2020-09-30",
+      "endDate": "2021-12-31",
+      "highlights": [],
+      "summary": "Working with the CANAL+ teams,\n\nThe main mission aim to imagine, conceive, formalize and realize automation for deploying applications and infrastructures using continuous integration.\n\nThis mission has been realized in 3 steps:\n\n- Discussion and identifying customer teams needs to propose evolution and enhancement for each application.\n- Realization of works with customer teams or at least with regular meeting to ensure good realization of work.\n- Teams support after delivery to ensure knowledge transfer and documentation strength.\n\nThe main tasks for this mission were to migrate application from datacenter to AWS Cloud and ensure continuous integration.",
+      "url": "https://www.linkedin.com/company/canal-/"
+    },
+    {
+      "name": "BNP Paribas Cardif",
+      "position": "Datalab Admin/Devops",
+      "startDate": "2018-12-31",
+      "endDate": "2020-03-31",
+      "highlights": [],
+      "summary": "Following an internal mobility at BNP Paribas, I joined the BNP Paribas Cardif Datalab team; the mission is focusing on the administration of their new platform Domino Datalab.\n\nWorking on this solution made me practice my docker skills and made me discover Kubernetes and use it to see its strength. The solution was hosting on a public Cloud, so I was able to practice these new skills too.\nI exchanged also a lot with the editor of the solution to contribute to their roadmap and enhanced widely their features. We promoted also strongly the BNP Paribas will for this solution to the editor to impact their priorities.\n\nThis mission permitted also to work on the different process from Big companies and its constraints. Participating to many subjects/projects linked to the Domino Datalab solution made me faces new problematic and drive different projects to integrate them in the solution, governance was also a strong point during each of these.",
+      "url": "https://www.linkedin.com/company/bnp-paribas-cardif/",
+      "location": "Nanterre"
+    },
+    {
+      "name": "BNP Paribas",
+      "position": "Devops Big Data",
+      "startDate": "2017-10-31",
+      "endDate": "2018-12-31",
+      "highlights": [],
+      "summary": "My mission take place in the BP2I team, this team project is to provide to the businesses branches of BNP a Big Data offer based on Hadoop. The main objective is to reach an industrialization of the processes to deploy and also update this Big data offer, ensuring the evolution of it.",
+      "url": "https://www.linkedin.com/company/bnp-paribas/",
+      "location": "Montreuil Area, France"
+    }
+  ],
+  "education": [
+    {
+      "institution": "ESIEE PARIS",
+      "area": "Data, Network Internet Of Things",
+      "studyType": "Master of Engineering (MEng)",
+      "startDate": "2012-12-31",
+      "endDate": "2017-12-31",
+      "score": "",
+      "courses": [
+        " - Intro to Hadoop and MapReduce MOOC"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "GitLab Certified Associate",
+      "issuer": "GitLab",
+      "startDate": "2021-11-30",
+      "url": "https://gitlab.badgr.com/public/assertions/RJA7MDHLSQy4Kkye1ztYYg"
+    },
+    {
+      "name": "HDP Certified Administrator (HDPCA) Exam",
+      "issuer": "Hortonworks",
+      "startDate": "2018-09-30",
+      "url": "http://verify.skilljar.com/c/2aa8vp28hazn"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Hadoop",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Big data",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Animation",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Sécurité informatique",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Photography",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Développement pour Android",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Programmation",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "cloud",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Serveur Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CSS3",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML 5",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PHP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microsoft Office",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Lightroom",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Windows",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Devoteam",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Applications dans le cloud",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Kanban",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Docker",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Kubernetes",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Ansible",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Bash",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Amazon Web Services",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Terraform",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "R",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Kerberos",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python (langage de programmation)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Packer",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Domino Datalab",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "OpenStack",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Gitlab CI",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Data Engineering",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "fr",
+      "fluency": "Native Speaker"
+    },
+    {
+      "fluency": "Professional Working",
+      "language": "Anglais"
+    },
+    {
+      "fluency": "Elementary",
+      "language": "Espagnol"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "Francais"
+    }
+  ],
+  "interests": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}
