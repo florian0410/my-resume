@@ -9,11 +9,6 @@
     "summary": "Informaticien depuis que j'ai supprimé un malware sur mon tout premier PC étant jeune. Je n'hésite pas à échanger pour trouver la solution à un problème. Sportif, je suis toujours partant pour une séance,en ce moment je fais de l'escalade en bloc et commence à avoir un bon niveau en voie aussi.",
     "profiles": [
       {
-        "network": "gitconnected",
-        "username": "florian0410",
-        "url": "https://gitconnected.com/florian0410"
-      },
-      {
         "network": "GitHub",
         "username": "florian0410",
         "url": "https://github.com/florian0410"
@@ -28,8 +23,13 @@
     "blog": null,
     "yearsOfExperience": null,
     "username": "florian0410",
-    "locationAsString": "4 route cavaliére du rompu, Ville D'Avray, 92410, France",
-    "region": "4 route cavaliére du rompu, Ville D'Avray, 92410, France",
+    "location": {
+      "address": "",
+      "postalCode": "92410",
+      "city": " Ville D'Avray",
+      "countryCode": "FR",
+      "region": "France"
+    },
     "karma": 12,
     "id": "d44270c2-2279-4c1e-a0ea-fae9472c0d6b",
     "followers": 0,
@@ -180,12 +180,12 @@
         "Développement des automatisations pour construire les images machine Cloud à l'aide de Packer et Gitlab CI",
         "Paramétrage du cache dependency proxy de Gitlab pour les pulls d'images Docker",
         "Configuration et déploiement d'agents gitlab runner dédiés avec Terraform et Packer",
-        "Automatisation des déploiements d'infrastructure à l'aide de modules Terraform dédiés",
+        "Automatisation des déploiements d'infrastructure à l'aide de modules Terraform dédiés aux applications",
         "Partage des application sur des réseaux privés séparés à l'aide de VPC endpoints (VPCe)",
-        "Étude et proposition d'une architecture Blue/Green et Canary avec  Terraform et les équilibreurs de charges AWS",
+        "Étude et mise en oeuvre d'une architecture Blue/Green et Canary avec  Terraform et les équilibreurs de charges AWS",
         "Accompagnement des équipes  sur la méthodologie open source avec l'usage des issues, merge requests, review de codes. Création de CI de vérification et validation de code à l'aide de pre-commit.",
         "Écriture régulière de documentation pour assurer un passage de connaissance optimal",
-        " Contribution dans la communauté CloudPosse sur leur module Beanstalk en intégrant certains changements implémentés en interne durant la mission.  https://github.com/cloudposse/terraform-aws-elastic-beanstalk-environment",
+        "Contribution dans la communauté CloudPosse sur leur module Beanstalk en intégrant certains changements implémentés durant la mission. https://github.com/cloudposse/terraform-aws-elastic-beanstalk-environment",
         "Proposition d'une nouvelle manière de gérer et prioriser les tâche de l'équipe à l'aide des issues Gitlab"
       ],
       "isCurrentRole": false,
@@ -208,14 +208,15 @@
       "url": "",
       "startDate": "2018-12-01",
       "endDate": "2020-03-01",
-      "summary": " La mission s'axe sur l'administration de leur nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.\n\nEnvironnement technique : Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
+      "summary": "La mission s'axe sur l'administration de leur nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.\n\nEnvironnement technique : Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
       "highlights": [
         "Administration et maintenance de la plateforme Domino Datalab sur le Orange Cloud Business (OCB)",
-        "Mise en œuvre d'une ETL avec Docker et du code Python. ",
-        "Documentation des processus, outils et développements",
+        "Mise en production de modèles de Data science via la solution et Kubernetes",
+        "Mise en œuvre d'une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de la solution.",
         "Réalisation d'opérations de debug sur le cluster Kubernetes de la solution",
-        " Création d'un tableau Kanban pour mieux gérer les actions et tâches au quotidien",
-        " Échanges avec les différents supports clients Orange et Domino Datalab pour résoudre des problèmes ou soumettre de nouveaux besoins."
+        "Échanges avec les support Cloud et l’éditeur de Domino Datalab pour résolution de problèmes ou demandes de fonctionnalités.",
+        "Documentation des processus, outils et développements",
+        "Création d'un tableau Kanban pour mieux gérer les actions et tâches au quotidien"
       ],
       "isCurrentRole": false,
       "start": {
