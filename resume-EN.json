@@ -1,0 +1,398 @@
+{
+  "basics": {
+    "name": "Florian Silva",
+    "label": "Devops Big Data",
+    "image": "https://avatars.githubusercontent.com/u/10270633?v=4",
+    "email": "florian.silva@hotmail.fr",
+    "phone": "",
+    "url": null,
+    "summary": "I have been a computer scientist since I removed malware from my very first PC when I was young. I do not hesitate to exchange to find the solution to a problem. Sportsman, I'm always ready for a session, at the moment I'm doing bouldering and I'm starting to have a good level in route too.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "florian0410",
+        "url": "https://github.com/florian0410"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/silvaflorian/",
+        "username": "silvaflorian"
+      }
+    ],
+    "headline": "It is necessary to have tolerance and the ability to find pleasure in every moment of our lives",
+    "blog": null,
+    "yearsOfExperience": null,
+    "username": "florian0410",
+    "location": {
+      "address": "",
+      "postalCode": "92410",
+      "city": " Ville D'Avray",
+      "countryCode": "FR",
+      "region": "France"
+    },
+    "karma": 12,
+    "id": "d44270c2-2279-4c1e-a0ea-fae9472c0d6b",
+    "followers": 0,
+    "following": 1,
+    "picture": "https://avatars.githubusercontent.com/u/10270633?v=4",
+    "website": null
+  },
+  "skills": [
+    {
+      "name": "Cloud",
+      "level": "",
+      "keywords": [
+        "AWS",
+        "AWS SSM",
+        "AWS ELB",
+        "AWS EC2",
+        "AWS Elastic Beanstalk",
+        "AWS ECR",
+        "AWS ACM",
+        "AWS S3",
+        "AWS Lambda",
+        "AWS Route 53",
+        "AWS IAM",
+        "Openstack",
+        "Orange Cloud business (OCB)"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Build Test Deploy",
+      "level": "",
+      "keywords": [
+        "Gitlab CI",
+        "Gitlab",
+        "Git",
+        "Ansible",
+        "Terraform",
+        "Packer"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Containerization",
+      "level": "",
+      "keywords": [
+        "Docker",
+        "Kubernetes"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Big data",
+      "level": "",
+      "keywords": [
+        "Hadoop",
+        "Domino Datalab"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Systems",
+      "level": "",
+      "keywords": [
+        "Linux",
+        "Bash"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Programming languages",
+      "level": "",
+      "keywords": [
+        "C",
+        "Java",
+        "Python",
+        "HTML",
+        "HCL"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Documentation",
+      "level": "",
+      "keywords": [
+        "Sphinx doc",
+        "Markdown",
+        "Confluence",
+        "reStructuredText"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Management",
+      "level": "",
+      "keywords": [
+        "Animation",
+        "Kanban"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Security",
+      "level": "",
+      "keywords": [
+        "SSH",
+        "Kerberos",
+        "Certificats SSL",
+        "PGP",
+        "Ansible vault"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Office tools",
+      "level": "",
+      "keywords": [
+        "Microsoft Office",
+        "Micorosoft Teams",
+        "Slack",
+        "Discord",
+        "Google workspaces"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    }
+  ],
+  "projects": [],
+  "work": [
+    {
+      "name": "CANAL+",
+      "location": "Paris, Issy les Moulineaux, France",
+      "description": "",
+      "position": "DevOps / SRE System Engineer",
+      "url": "",
+      "startDate": "2020-09-01",
+      "endDate": "2021-12-01",
+      "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.\n\nEnvironnement technique: Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",
+      "highlights": [
+        "Developing automations to build Cloud machine images using Packer and Gitlab CI",
+        "Setting up Gitlab's cache dependency proxy for Docker image pulls",
+        "Configuration and deployment of dedicated gitlab runner agents with Terraform and Packer",
+        "Automating infrastructure deployments with dedicated Terraform modules for applications",
+        "Application sharing on separate private networks using VPC endpoints (VPCe)",
+        "Study and implementation of a Blue/Green and Canary architecture with Terraform and AWS load balancers",
+        "Supporting the teams on the open source methodology with the use of issues, merge requests, code review. Creation of verification CIs and code validation using pre-commit.",
+        "Regular writing of documentation to ensure optimal knowledge transfer",
+        "Contributed to the CloudPosse community on their Beanstalk module by integrating some changes implemented during the mission. https://github.com/cloudposse/terraform-aws-elastic-beanstalk-environment",
+        "Proposed a new way to manage and prioritize the team's tasks using Gitlab issues"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2020,
+        "month": 9
+      },
+      "end": {
+        "year": 2021,
+        "month": 12
+      },
+      "company": "CANAL+",
+      "website": ""
+    },
+    {
+      "name": "BNP Paribas Cardif",
+      "location": "Nanterre, 92000, France",
+      "description": "",
+      "position": "Datalab Admin/Devops",
+      "url": "",
+      "startDate": "2018-12-01",
+      "endDate": "2020-03-01",
+      "summary": "The mission focuses on the administration of their new Big Data platform Domino Datalab in the Orange OCB Cloud.\n\nEnvironnement technique : Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
+      "highlights": [
+        "Administration and maintenance of the Domino Datalab platform on the Orange Cloud Business (OCB)",
+        "Putting data science models into production via the solution and Kubernetes",
+        "Implemented ETL mechanics with Docker and Python code to enable group data import within the solution.",
+        "Performed debugging operations on the solution's Kubernetes cluster.",
+        "Exchanges with the Cloud support and the Domino Datalab editor to resolve problems or requests for features",
+        "Documentation of processes, tools and developments",
+        "Creation of a Kanban board to better manage actions and tasks on a daily basis"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2018,
+        "month": 12
+      },
+      "end": {
+        "year": 2020,
+        "month": 3
+      },
+      "company": "BNP Paribas Cardif",
+      "website": ""
+    },
+    {
+      "name": "Devoteam",
+      "location": "",
+      "description": "",
+      "position": "Consultant Big Data, data engineer",
+      "url": "",
+      "startDate": "2017-09-01",
+      "endDate": "2020-03-01",
+      "summary": "The mission carried out during the period indicated were as Devoteam consultants.",
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2017,
+        "month": 9
+      },
+      "end": {
+        "year": 2020,
+        "month": 3
+      },
+      "company": "Devoteam",
+      "website": ""
+    },
+    {
+      "name": "BNP Paribas",
+      "location": "Montreuil, 93100, France",
+      "description": "",
+      "position": "Devops Big Data",
+      "url": "",
+      "startDate": "2017-10-01",
+      "endDate": "2018-12-01",
+      "summary": "The main objective is to industrialize the process of deployment and evolution of the Big Data group offer that will be proposed.\n\nEnvironnement technique : Scrum (Kanban + Sprints), JIRA, DevOps, GitOps\nLinux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Apache, Nginx, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud intern, SSH, Kerberos",
+      "highlights": [
+        "Rework, clean up and improve stability of Ansible code to deploy Hadoop cluster",
+        "Versioning and setting up a release system with gitlab",
+        "Switching the documentation from Word to Sphinx doc to allow a more ergonomic web display and versioning of it",
+        "Drastic overhaul of the existing documentation",
+        "Definition of the Ranger security rules and policies by default access on the cluster",
+        "Testing and validation of the stability of the Hadoop architecture (HDFS, Yarn, Hive, Kerberos...)",
+        "Development and automation of post installation unit tests",
+        "Increasing the number of nodes and revising the service distribution to ensure service stability in production. ",
+        "Creation of monitoring rules and alarms for system monitoring teams, automation of their deployment with Ansible",
+        "Support for delivery/run teams for the implementation of deployment mechanisms and problem corrections"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2017,
+        "month": 10
+      },
+      "end": {
+        "year": 2018,
+        "month": 12
+      },
+      "company": "BNP Paribas",
+      "website": ""
+    }
+  ],
+  "publications": [],
+  "education": [
+    {
+      "institution": "ESIEE Paris",
+      "url": "",
+      "area": "Data, network and Internet of Things",
+      "studyType": "Engineering degree",
+      "startDate": "2012-09-01",
+      "endDate": "2017-09-01",
+      "score": "",
+      "courses": [],
+      "description": "",
+      "activities": "",
+      "start": {
+        "year": 2012,
+        "month": 9
+      },
+      "end": {
+        "year": 2017,
+        "month": 9
+      },
+      "website": "",
+      "gpa": ""
+    }
+  ],
+  "volunteer": [],
+  "awards": [],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Professional Working"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Elementary"
+    },
+    {
+      "language": "French",
+      "fluency": "Native Speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Loisirs",
+      "keywords": [
+        "Escalade",
+        "Association de jeux de société",
+        "Badminton",
+        "Photographie",
+        "Jeux vidéo",
+        "Festivals"
+      ]
+    },
+    {
+      "name": "Travels",
+      "keywords": [
+        "Germany",
+        "Poland",
+        "Switzerland",
+        "Spain",
+        "Dominican Republic",
+        "Italy",
+        "Austria",
+        "Bulgaria",
+        "England",
+        "Croatia",
+        "Greece",
+        "Indonesia",
+        "Senegal",
+        "USA",
+        "Japan"
+      ]
+    }
+  ],
+  "references": [],
+  "certificates": [
+    {
+      "name": "HDP Certified Administrator (HDPCA) Exam",
+      "issuer": "Hortonworks",
+      "date": "",
+      "url": "",
+      "summary": "",
+      "fullDate": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "website": ""
+    },
+    {
+      "name": "GitLab Certified Associate",
+      "issuer": "GitLab",
+      "date": "",
+      "url": "",
+      "summary": "",
+      "fullDate": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "website": ""
+    }
+  ],
+  "meta": {
+    "note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2020-12-29T15:53:00"
+  }
+}
