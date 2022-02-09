@@ -175,7 +175,8 @@
       "url": "",
       "startDate": "2020-09-01",
       "endDate": "2021-12-01",
-      "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.\n\nEnvironnement technique: Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",
+      "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.",
+      "skillsUsed":"Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",
       "highlights": [
         "Developing automations to build Cloud machine images using Packer and Gitlab CI",
         "Setting up Gitlab's cache dependency proxy for Docker image pulls",
@@ -208,7 +209,8 @@
       "url": "",
       "startDate": "2018-12-01",
       "endDate": "2020-03-01",
-      "summary": "The mission focuses on the administration of their new Big Data platform Domino Datalab in the Orange OCB Cloud.\n\nEnvironnement technique : Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
+      "summary": "The mission focuses on the administration of their new Big Data platform Domino Datalab in the Orange OCB Cloud.",
+      "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
       "highlights": [
         "Administration and maintenance of the Domino Datalab platform on the Orange Cloud Business (OCB)",
         "Putting data science models into production via the solution and Kubernetes",
@@ -239,6 +241,7 @@
       "startDate": "2017-09-01",
       "endDate": "2020-03-01",
       "summary": "The mission carried out during the period indicated were as Devoteam consultants.",
+      "skillsUsed":"",
       "highlights": [],
       "isCurrentRole": false,
       "start": {
@@ -260,7 +263,8 @@
       "url": "",
       "startDate": "2017-10-01",
       "endDate": "2018-12-01",
-      "summary": "The main objective is to industrialize the process of deployment and evolution of the Big Data group offer that will be proposed.\n\nEnvironnement technique : Scrum (Kanban + Sprints), JIRA, DevOps, GitOps\nLinux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Apache, Nginx, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud intern, SSH, Kerberos",
+      "summary": "The main objective is to industrialize the process of deployment and evolution of the Big Data group offer that will be proposed.",
+      "skillsUsed":"Scrum (Kanban + Sprints), JIRA, DevOps, GitOps\nLinux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Apache, Nginx, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud intern, SSH, Kerberos",
       "highlights": [
         "Rework, clean up and improve stability of Ansible code to deploy Hadoop cluster",
         "Versioning and setting up a release system with gitlab",

@@ -175,7 +175,8 @@
       "url": "",
       "startDate": "2020-09-01",
       "endDate": "2021-12-01",
-      "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.\n\nEnvironnement technique: Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",
+      "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.",
+      "skillsUsed":"Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",      
       "highlights": [
         "Développement des automatisations pour construire les images machine Cloud à l'aide de Packer et Gitlab CI",
         "Paramétrage du cache dependency proxy de Gitlab pour les pulls d'images Docker",
@@ -208,7 +209,8 @@
       "url": "",
       "startDate": "2018-12-01",
       "endDate": "2020-03-01",
-      "summary": "La mission s'axe sur l'administration de leur nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.\n\nEnvironnement technique : Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
+      "summary": "La mission s'axe sur l'administration de leur nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.",
+      "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",      
       "highlights": [
         "Administration et maintenance de la plateforme Domino Datalab sur le Orange Cloud Business (OCB)",
         "Mise en production de modèles de Data science via la solution et Kubernetes",
@@ -239,6 +241,7 @@
       "startDate": "2017-09-01",
       "endDate": "2020-03-01",
       "summary": "Les missions réalisées dans la période indiquée l'ont été en tant que consultant Devoteam.",
+      "skillsUsed":"",            
       "highlights": [],
       "isCurrentRole": false,
       "start": {
@@ -260,7 +263,8 @@
       "url": "",
       "startDate": "2017-10-01",
       "endDate": "2018-12-01",
-      "summary": "L'objectif principal est de pouvoir industrialiser le processus de déploiement et évolution de l'offre Big Data groupe qui sera proposée.\n\nEnvironnement technique : Scrum (Kanban + Sprints), JIRA, DevOps, GitOps\nLinux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Apache, Nginx, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud intern, SSH, Kerberos",
+      "summary": "L'objectif principal est de pouvoir industrialiser le processus de déploiement et évolution de l'offre Big Data groupe qui sera proposée.",
+      "skillsUsed":"Scrum (Kanban + Sprints), JIRA, DevOps, GitOps\nLinux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Apache, Nginx, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud intern, SSH, Kerberos",
       "highlights": [
         "Reprise, nettoyage et amélioration de la stabilité du code Ansible pour déployer le cluster Hadoop",
         "Versioning et mise en place d’un système de release avec gitlab",
