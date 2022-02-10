@@ -1,7 +1,10 @@
 JSON_RESUME_THEME=kendall
-SOURCE_FILE=resume-FR-gitconnected.json
-FILENAME=resume-FR
-HTML_FILENAME=resume-FR.html
+FILENAME=resume
+SOURCE_FILE_FRENCH=$(FILENAME)-FR.json
+SOURCE_FILE_ENGLISH=$(FILENAME)-EN.json
+
+OUTFILE_FRENCH=$(FILENAME)-FR
+OUTFILE_ENGLISH=$(FILENAME)-EN
 
 build-command:
 	docker build . -t resume-command
@@ -17,9 +20,13 @@ install-theme:
 	sudo npm install -g jsonresume-theme-$(JSON_RESUME_THEME)
 
 create-resume: install-theme
-	resume export $(FILENAME) --format pdf -r $(SOURCE_FILE) --theme $(JSON_RESUME_THEME)
-	resume export $(FILENAME) --format html -r $(SOURCE_FILE) --theme $(JSON_RESUME_THEME)
-
+# French
+	resume export $(OUTFILE_FRENCH) --format pdf -r $(SOURCE_FILE_FRENCH)  --theme $(JSON_RESUME_THEME)
+	resume export $(OUTFILE_FRENCH) --format html -r $(SOURCE_FILE_FRENCH)  --theme $(JSON_RESUME_THEME)
+	
+#English
+	resume export $(OUTFILE_ENGLISH) --format pdf -r $(SOURCE_FILE_ENGLISH) --theme $(JSON_RESUME_THEME)
+	resume export $(OUTFILE_ENGLISH) --format html -r $(SOURCE_FILE_ENGLISH) --theme $(JSON_RESUME_THEME)
 
 from-gitconnected:
 	curl https://gitconnected.com/v1/portfolio/florian0410 | jq . > $(SOURCE_FILE)
