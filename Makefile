@@ -29,7 +29,7 @@ create-resume: install-theme
 	resume export $(OUTFILE_ENGLISH) --format html -r $(SOURCE_FILE_ENGLISH) --theme $(JSON_RESUME_THEME)
 
 from-gitconnected:
-	curl https://gitconnected.com/v1/portfolio/florian0410 | jq . > $(SOURCE_FILE)
+	curl https://gitconnected.com/v1/portfolio/florian0410 | jq . > $(FILENAME)-gitconnected.json
 
 # Only with official supported templates
 serve-resume:
