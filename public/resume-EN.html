@@ -1,0 +1,1018 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+	<title>Florian Silva</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+      /*
+! tailwindcss v3.0.13 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: Ubuntu, ui-sans-serif, sans-serif; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+  display: none;
+}
+  h1, h2, h3, h4, h5, h6 {
+  --tw-text-opacity: 1;
+  color: rgb(124 45 18 / var(--tw-text-opacity));
+}
+
+  h2 {
+  margin-bottom: 1rem;
+  display: inline-block;
+  -moz-column-break-after: avoid;
+       break-after: avoid;
+  border-radius: 0.5rem;
+  border-bottom-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(249 115 22 / var(--tw-border-opacity));
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+  section {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+
+  a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+*, ::before, ::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.order-1 {
+  order: 1;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.m-1 {
+  margin: 0.25rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.w-2 {
+  width: 0.5rem;
+}
+.max-w-4xl {
+  max-width: 56rem;
+}
+.list-inside {
+  list-style-position: inside;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.break-inside-avoid {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-items-center {
+  justify-items: center;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.bg-orange-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 247 237 / var(--tw-bg-opacity));
+}
+.bg-orange-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+}
+.p-8 {
+  padding: 2rem;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.italic {
+  font-style: italic;
+}
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+.text-orange-900 {
+  --tw-text-opacity: 1;
+  color: rgb(124 45 18 / var(--tw-text-opacity));
+}
+.text-orange-500 {
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity));
+}
+.text-orange-700 {
+  --tw-text-opacity: 1;
+  color: rgb(194 65 12 / var(--tw-text-opacity));
+}
+@media print {
+
+  .print\:order-2 {
+    order: 2;
+  }
+
+  .print\:grid {
+    display: grid;
+  }
+
+  .print\:flex-row {
+    flex-direction: row;
+  }
+
+  .print\:justify-between {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 640px) {
+
+  .sm\:order-2 {
+    order: 2;
+  }
+
+  .sm\:grid {
+    display: grid;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+}
+
+    </style>
+
+
+	</head>
+	<body class="bg-orange-50 p-8 text-slate-900 text-sm">
+	<div class="max-w-4xl mx-auto px-2">
+  <div class="mb-2">
+      <div class="flex flex-col sm:flex-row print:flex-row sm:justify-between print:justify-between">
+        <div>
+          <h1 class="text-5xl mb-4">Florian Silva</h1>
+          <h2 class="text-xl mb-4">Devops and Big Data Engineer</h2>
+        </div>
+        <div>
+          	<section>
+                <div class="p-1 text-orange-900 flex flex-row">
+                  <span class="sr-only">Location: </span>
+                  <i class="fa fa-map-marker text-m mr-2 text-orange-500 w-2 inline-flex flex-row items-center justify-center"></i>
+                    <span>, France, France</span>
+                </div>      <div class="p-1 text-orange-900 flex flex-row">
+                  <span class="sr-only">E-mail: </span>
+                  <i class="fa fa-envelope text-m mr-2 text-orange-500 w-2 inline-flex flex-row items-center justify-center"></i>
+                    <span>florian.silva@hotmail.fr</span>
+                </div>          <div class="p-1 text-orange-900 flex flex-row">
+                      <span class="sr-only">GitHub: </span>
+                      <i class="fa fa-github text-m mr-2 text-orange-500 w-2 inline-flex flex-row items-center justify-center"></i>
+                        <a href="https://github.com/florian0410"> GitHub <i class="fa fa-external-link text-xs" aria-hidden="true"></i></a>
+                    </div>          <div class="p-1 text-orange-900 flex flex-row">
+                      <span class="sr-only">LinkedIn: </span>
+                      <i class="fa fa-linkedin text-m mr-2 text-orange-500 w-2 inline-flex flex-row items-center justify-center"></i>
+                        <a href="https://www.linkedin.com/in/silvaflorian/"> LinkedIn <i class="fa fa-external-link text-xs" aria-hidden="true"></i></a>
+                    </div>	</section>
+        </div>
+      </div>
+    </div>
+      <div class="mb-4">
+        <p>Computer scientist, Gamer and Sportsman, I come from the Big data field where I learned the importance of automation to deploy distributed systems. I&#x27;m very fond of the open source development mentality that brings an efficient way of working and promotes clearer information sharing.
+ Always a good listener and willing to adapt, I&#x27;m always looking to improve my work and don&#x27;t hesitate to push and highlight a solution that is worthwhile.</p>
+      </div>
+    <div class="sm:grid print:grid grid-cols-4 gap-8">
+      <div class="sm:order-2 print:order-2 col-span-3 mb-4">
+        <section>
+        	<h2>Work</h2>
+            <div class="mb-6 break-inside-avoid">
+              <div class="flex flex-row items-start justify-between mb-3">
+                <div>
+                  <h3 class="text-base font-bold">
+                      CANAL+
+                  </h3>
+                    <p class="font-bold text-orange-700">
+                      DevOps / SRE System Engineer
+                    </p>
+                </div>
+                  <div class="text-sm text-orange-500">
+                    Sep 2020
+                      - Dec 2021
+                  </div>
+              </div>
+                <p class="mb-2">Les problématiques principales de cette mission consistaient à migrer un ensemble d&#x27;applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.</p>
+                <ul class="list-disc list-inside">
+                    <li class="mb-1">Developing automations to build Cloud machine images using Packer, Ansible and Gitlab CI</li>
+                    <li class="mb-1">Setting up Gitlab&#x27;s cache dependency proxy for Docker image pulls</li>
+                    <li class="mb-1">Configuration and deployment of dedicated gitlab runner agents with Terraform and Packer</li>
+                    <li class="mb-1">Automating infrastructure deployments with dedicated Terraform modules for applications</li>
+                    <li class="mb-1">Application sharing on separate private networks using VPC endpoints (VPCe)</li>
+                    <li class="mb-1">Study and implementation of a Blue/Green and Canary architecture with Terraform and AWS load balancers</li>
+                    <li class="mb-1">Supporting the teams on the open source methodology with the use of issues, merge requests, code review. Creation of verification CIs and code validation using pre-commit.</li>
+                    <li class="mb-1">Regular writing of documentation to ensure optimal knowledge transfer</li>
+                    <li class="mb-1">Contributed to the CloudPosse community on their Beanstalk module by integrating some changes implemented during the mission. https://github.com/cloudposse/terraform-aws-elastic-beanstalk-environment</li>
+                    <li class="mb-1">Proposed a new way to manage and prioritize the team&#x27;s tasks using Gitlab issues</li>
+                </ul>
+            </div>    <div class="mb-6 break-inside-avoid">
+              <div class="flex flex-row items-start justify-between mb-3">
+                <div>
+                  <h3 class="text-base font-bold">
+                      BNP Paribas Cardif
+                  </h3>
+                    <p class="font-bold text-orange-700">
+                      Datalab Admin/Devops
+                    </p>
+                </div>
+                  <div class="text-sm text-orange-500">
+                    Dec 2018
+                      - Mar 2020
+                  </div>
+              </div>
+                <p class="mb-2">The mission focuses on the administration of the new Domino Datalab Big Data platform in the Orange OCB Cloud.</p>
+                <ul class="list-disc list-inside">
+                    <li class="mb-1">Implemented ETL mechanics with Docker and Python code to enable group data import within Domino</li>
+                    <li class="mb-1">Improved servers fleet management with Ansible</li>
+                    <li class="mb-1">Created a Docker image to allow connection to the Hadoop datalake.</li>
+                    <li class="mb-1">Production deployment of data science models via Domino and Kubernetes</li>
+                    <li class="mb-1">Implementation of a data governance on Domino Datalab and management of access rights</li>
+                    <li class="mb-1">Performing debugging operations on the Kubernetes cluster of the solution</li>
+                    <li class="mb-1">Exchanges with the Cloud support and the editor of Domino Datalab to resolve problems or requests for features</li>
+                    <li class="mb-1">Documentation of processes, tools and developments</li>
+                    <li class="mb-1">Establishment of an agile methodology with a Kanban board and daily/weekly meetings</li>
+                </ul>
+            </div>    <div class="mb-6 break-inside-avoid">
+              <div class="flex flex-row items-start justify-between mb-3">
+                <div>
+                  <h3 class="text-base font-bold">
+                      Devoteam
+                  </h3>
+                    <p class="font-bold text-orange-700">
+                      Consultant Big Data, data engineer
+                    </p>
+                </div>
+                  <div class="text-sm text-orange-500">
+                    Sep 2017
+                      - Mar 2020
+                  </div>
+              </div>
+                <p class="mb-2">The mission carried out during the period indicated were as Devoteam consultants.</p>
+            </div>    <div class="mb-6 break-inside-avoid">
+              <div class="flex flex-row items-start justify-between mb-3">
+                <div>
+                  <h3 class="text-base font-bold">
+                      BNP Paribas - BP2I
+                  </h3>
+                    <p class="font-bold text-orange-700">
+                      Devops Big Data
+                    </p>
+                </div>
+                  <div class="text-sm text-orange-500">
+                    Oct 2017
+                      - Dec 2018
+                  </div>
+              </div>
+                <p class="mb-2">The main objective is to industrialize the process of deployment and the evolution of the Big Data group offer that will be proposed.</p>
+                <ul class="list-disc list-inside">
+                    <li class="mb-1">Rework, clean up and improve stability of Ansible code to deploy Hadoop cluster</li>
+                    <li class="mb-1">Versioning and setting up a release system with, Gitlab, Gitlab CI</li>
+                    <li class="mb-1">Evolution of the documentation for delivery/run by moving from Word to Sphinx doc to allow web display and versioning of it</li>
+                    <li class="mb-1">Drastic overhaul of existing documentation (Rewriting)</li>
+                    <li class="mb-1">Definition of the Ranger security rules and policies by default access on the cluster</li>
+                    <li class="mb-1">Moving to high availability and stabilizing the Kerberos security service</li>
+                    <li class="mb-1">Testing and validation of the stability of the Hadoop architecture (HDFS, Yarn, Hive, Kerberos...)</li>
+                    <li class="mb-1">Development and automation of post installation unit tests</li>
+                    <li class="mb-1">Increasing the number of nodes and revising the service distribution to ensure service stability in production. </li>
+                    <li class="mb-1">Creation and deployment with Ansible of Nimsoft and AutoSys production monitoring and alarm rules</li>
+                    <li class="mb-1">Support for delivery/run teams for the implementation of deployment mechanisms and problem corrections</li>
+                </ul>
+            </div>    <div class="mb-6 break-inside-avoid">
+              <div class="flex flex-row items-start justify-between mb-3">
+                <div>
+                  <h3 class="text-base font-bold">
+                      Devoteam
+                  </h3>
+                    <p class="font-bold text-orange-700">
+                      Industrialization of distributed systems for continuous high availability of data - Devoteam (Internship)
+                    </p>
+                </div>
+                  <div class="text-sm text-orange-500">
+                    Jan 2017
+                      - Jul 2017
+                  </div>
+              </div>
+                <p class="mb-2">During this internship, I worked on different aspects of distributed systems as part of a project to industrialize the upgrades of a Hadoop solution</p>
+                <ul class="list-disc list-inside">
+                    <li class="mb-1">Preparation and planning of the tasks to be done during the internship with a Gantt chart</li>
+                    <li class="mb-1">Deploying a Hadoop cluster without a wizard, the objective being to understand the tool used</li>
+                    <li class="mb-1">Automation of deployment and installation processes with Ansible</li>
+                    <li class="mb-1">Deployment of a distributed HortonWorks solution</li>
+                    <li class="mb-1">Documentation of processes, tools and developments</li>
+                    <li class="mb-1">Implementation of high availability of data and services of the cluster and of a Kerberos security</li>
+                    <li class="mb-1">Realization of rolling upgrades on the cluster</li>
+                    <li class="mb-1">Report on the tool&#x27;s capabilities to perform rolling updates</li>
+                </ul>
+            </div></section>
+        <section>
+        	<h2>Education</h2>
+            <div class="mb-6 break-inside-avoid">
+              <div class="flex flex-row items-start justify-between mb-3">
+                <div>
+                  <h3 class="text-base font-bold">
+                      ESIEE Paris
+                  </h3>
+                    <p class="font-bold text-orange-700">
+                      Engineering degree in Data, network and Internet of Things
+                    </p>
+                </div>
+                  <div class="text-sm text-orange-500">
+                    Sep 2012
+                      - Sep 2017
+                  </div>
+              </div>
+            </div></section>
+      </div>
+      <div class="order-1 col-span-1 mb-4">
+        <section>
+        	<h2>Skills</h2>
+            <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Cloud</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS SSM</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS ELB</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS EC2</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS Elastic Beanstalk</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS ECR</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS ACM</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS S3</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS Lambda</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS Route 53</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">AWS IAM</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Openstack</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Orange Cloud business (OCB)</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Build Test Deploy</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Gitlab CI</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Gitlab</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Git</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Ansible</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Terraform</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Packer</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Docker</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Kubernetes</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Big data</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Hadoop</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Domino Datalab</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Systems</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Linux</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Bash</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Programming languages</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">C</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Java</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Python</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">HTML</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">HCL</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Documentation</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Sphinx doc</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Markdown</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Confluence</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">reStructuredText</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Management</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Animation</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Kanban</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Gantt</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Scrum</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Security</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">SSH</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Kerberos</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Certificats SSL</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">PGP</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Ansible vault</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Office tools</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Microsoft Office</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Micorosoft Teams</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Slack</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Discord</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Google workspaces</span>
+                </div>
+            </div></section>
+        <section>
+        	<h2>Languages</h2>
+            <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">English</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Professional Working</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Spanish</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Elementary</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">French</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Native Speaker</span>
+                </div>
+            </div></section>
+        <section>
+        	<h2>Interests</h2>
+            <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Loisirs</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Escalade</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Association de jeux de société</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Badminton</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Photographie</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Jeux vidéo</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Festivals</span>
+                </div>
+            </div>    <div class="mb-2 break-inside-avoid">
+                <h3 class="font-sm font-bold mb-2">Travels</h3>
+                <div>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Germany</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Poland</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Switzerland</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Spain</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Dominican Republic</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Italy</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Austria</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Bulgaria</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">England</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Croatia</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Greece</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Indonesia</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Senegal</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">USA</span>
+                    <span class="inline-block mr-1 mb-1 py-0.5 px-1 bg-orange-100 rounded text-orange-700">Japan</span>
+                </div>
+            </div></section>
+      </div>
+    </div>
+	</body>
+</html>
