@@ -209,16 +209,18 @@
       "url": "",
       "startDate": "2018-12-01",
       "endDate": "2020-03-01",
-      "summary": "La mission s'axe sur l'administration de leur nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.",
+      "summary": "La mission s'axe sur l'administration de la nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.",
       "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",      
       "highlights": [
-        "Administration et maintenance de la plateforme Domino Datalab sur le Orange Cloud Business (OCB)",
-        "Mise en production de modèles de Data science via la solution et Kubernetes",
-        "Mise en œuvre d'une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de la solution.",
+        "Mise en œuvre d'une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de la solution",
+        "Amélioration de la gestion du parc de serveurs avec Ansible",
+        "Création d'une image docker pour permettre la connexion au datalake Hadoop",
+        "Mise en production de modèles de Data science via Domino et Kubernetes",
+        "Mise en place d'une gouvernance des données sur Domino Datalab et gestion des droits d'accés",
         "Réalisation d'opérations de debug sur le cluster Kubernetes de la solution",
-        "Échanges avec les support Cloud et l’éditeur de Domino Datalab pour résolution de problèmes ou demandes de fonctionnalités.",
+        "Échanges avec les support Cloud et l’éditeur de Domino Datalab pour résolution de problèmes ou demandes de fonctionnalités",
         "Documentation des processus, outils et développements",
-        "Création d'un tableau Kanban pour mieux gérer les actions et tâches au quotidien"
+        "Mise en place d'une méthodologie agile avec un tableau Kanban et des réunions daily/weekly"
       ],
       "isCurrentRole": false,
       "start": {

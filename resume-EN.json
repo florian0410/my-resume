@@ -209,16 +209,18 @@
       "url": "",
       "startDate": "2018-12-01",
       "endDate": "2020-03-01",
-      "summary": "The mission focuses on the administration of their new Big Data platform Domino Datalab in the Orange OCB Cloud.",
+      "summary": "The mission focuses on the administration of the new Domino Datalab Big Data platform in the Orange OCB Cloud.",
       "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
       "highlights": [
-        "Administration and maintenance of the Domino Datalab platform on the Orange Cloud Business (OCB)",
-        "Putting data science models into production via the solution and Kubernetes",
-        "Implemented ETL mechanics with Docker and Python code to enable group data import within the solution.",
-        "Performed debugging operations on the solution's Kubernetes cluster.",
-        "Exchanges with the Cloud support and the Domino Datalab editor to resolve problems or requests for features",
+        "Implemented ETL mechanics with Docker and Python code to enable group data import within the solution",
+        "Improved servers fleet management with Ansible",
+        "Created a Docker image to allow connection to the Hadoop datalake.",
+        "Putting data science models into production via the Domino and Kubernetes",
+        "Implementation of a data governance on Domino Datalab and management of access rights",
+        "Performing debugging operations on the Kubernetes cluster of the solution",
+        "Exchanges with the Cloud support and the editor of Domino Datalab to resolve problems or requests for features",
         "Documentation of processes, tools and developments",
-        "Creation of a Kanban board to better manage actions and tasks on a daily basis"
+        "Implementation of an agile methodology with a Kanban board and daily/weekly meetings"
       ],
       "isCurrentRole": false,
       "start": {
