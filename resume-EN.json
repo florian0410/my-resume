@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Florian Silva",
-    "label": "Devops Big Data",
+    "label": "Devops and Big Data Engineer",
     "image": "https://avatars.githubusercontent.com/u/10270633?v=4",
     "email": "florian.silva@hotmail.fr",
     "phone": "",
@@ -204,7 +204,7 @@
       "startDate": "2018-12-01",
       "endDate": "2020-03-01",
       "summary": "The mission focuses on the administration of the new Domino Datalab Big Data platform in the Orange OCB Cloud.",
-      "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
+      "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
       "highlights": [
         "Implemented ETL mechanics with Docker and Python code to enable group data import within Domino",
         "Improved servers fleet management with Ansible",
@@ -260,7 +260,7 @@
       "startDate": "2017-10-01",
       "endDate": "2018-12-01",
       "summary": "The main objective is to industrialize the process of deployment and the evolution of the Big Data group offer that will be proposed.",
-      "skillsUsed":"Scrum (Kanban + Sprints), JIRA, DevOps, GitOps, Linux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Apache, Nginx, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud intern, SSH, Kerberos",
+      "skillsUsed":"Scrum (Kanban + Sprints), JIRA, GitOps, Linux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, internal cloud, SSH, Kerberos",
       "highlights": [
         "Rework, clean up and improve stability of Ansible code to deploy Hadoop cluster",
         "Versioning and setting up a release system with, Gitlab, Gitlab CI",

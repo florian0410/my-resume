@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Florian Silva",
-    "label": "Devops Big Data",
+    "label": "Ingénieur Devops et Big Data",
     "image": "https://avatars.githubusercontent.com/u/10270633?v=4",
     "email": "florian.silva@hotmail.fr",
     "phone": "",
@@ -204,7 +204,7 @@
       "startDate": "2018-12-01",
       "endDate": "2020-03-01",
       "summary": "La mission s'axe sur l'administration de la nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.",
-      "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",      
+      "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",      
       "highlights": [
         "Mise en œuvre d'une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de Domino",
         "Amélioration de la gestion du parc de serveurs avec Ansible",
@@ -260,7 +260,7 @@
       "startDate": "2017-10-01",
       "endDate": "2018-12-01",
       "summary": "L'objectif principal est de pouvoir industrialiser le processus de déploiement et l'évolution de l'offre Big Data groupe qui sera proposée.",
-      "skillsUsed":"Scrum (Kanban + Sprints), JIRA, DevOps, GitOps, Linux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Apache, Nginx, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud intern, SSH, Kerberos",
+      "skillsUsed":"Scrum (Kanban + Sprints), JIRA, GitOps, Linux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud interne, SSH, Kerberos",
       "highlights": [
         "Reprise, nettoyage et amélioration de la stabilité du code Ansible pour déployer le cluster Hadoop",
         "Versioning et mise en place d’un système de release avec Gitlab, Gitlab CI",
