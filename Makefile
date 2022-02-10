@@ -22,11 +22,11 @@ install-theme:
 create-resume: install-theme
 # French
 	resume export $(OUTFILE_FRENCH) --format pdf -r $(SOURCE_FILE_FRENCH)  --theme $(JSON_RESUME_THEME)
-	resume export $(OUTFILE_FRENCH) --format html -r $(SOURCE_FILE_FRENCH)  --theme $(JSON_RESUME_THEME)
+	resume export $(PWD)/public/$(OUTFILE_FRENCH) --format html -r $(SOURCE_FILE_FRENCH)  --theme $(JSON_RESUME_THEME)
 	
 #English
 	resume export $(OUTFILE_ENGLISH) --format pdf -r $(SOURCE_FILE_ENGLISH) --theme $(JSON_RESUME_THEME)
-	resume export $(OUTFILE_ENGLISH) --format html -r $(SOURCE_FILE_ENGLISH) --theme $(JSON_RESUME_THEME)
+	resume export $(PWD)/public/$(OUTFILE_ENGLISH) --format html -r $(SOURCE_FILE_ENGLISH) --theme $(JSON_RESUME_THEME)
 
 from-gitconnected:
 	curl https://gitconnected.com/v1/portfolio/florian0410 | jq . > $(FILENAME)-gitconnected.json
