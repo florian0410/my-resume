@@ -1,4 +1,4 @@
-JSON_RESUME_THEME=class
+JSON_RESUME_THEME=paper-plus-plus
 FILENAME=resume
 PAGES_FOLDER=docs
 SOURCE_FILE_FRENCH=$(FILENAME)-FR.json
@@ -19,6 +19,8 @@ fix-chrome-missing:
 
 install-theme:
 	sudo npm install -g jsonresume-theme-$(JSON_RESUME_THEME)
+	npm install jsonresume-theme-$(JSON_RESUME_THEME)
+	
 
 create-resume: install-theme
 # French

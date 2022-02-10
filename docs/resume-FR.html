@@ -1,631 +1,978 @@
 <!doctype html>
 <html>
 	<head>
-	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>Florian Silva - CV</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
-	<style>
-	/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+		<title>Florian Silva's Resume</title>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
 
-/* General, overall styling */
-body {
-	background: #F9F9F9;
-	font-size: 0.9em;
-	font-family: 'Lato', sans-serif;
-	margin-bottom: 100px;
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<style>
+			body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+  font-size: 13pt;
+  font-family: "Open Sans";
 }
 
-em {
-	color: #999;
+h2{
+  font-weight: normal;
+  margin: 0.5em;
+  margin-bottom: 0.2em;
 }
 
-p {
-	line-height: 1.4;
+h3{
+  font-weight:300;
+  font-size:1em;
+  margin: 0em;
 }
 
-a {
-	color: #31A6D6;
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-size: 0.6em;
 }
 
-a:visited {
-	color: #3061A5;
+.summary p{
+  font-size:0.7em;
+  font-weight:400;
+
+  color: #424242;
+
+  margin-left:2em;
 }
 
-a:hover {
-	color: #3061A5;
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
 }
 
-ul {
-	margin-bottom: 0;
-}
-section {
-	margin-bottom: 2em;
-}
-
-blockquote {
-	margin: 0;
-	margin-bottom: 1em;
-}
-
-/* End general, overall styling */
-
-/* Header name styling */
+/* Header */
 
 header {
-	background: #68B6E3;
-	padding: 50px;
-	margin-bottom: 50px;
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Merriweather";
 }
 
-header h1 {
-	color: #FFFFFF;
-	max-width: 700px;
-	margin: 0 auto;
+.header-content {
+  display: inline-block;
 }
 
-header h2 {
-	color: #F3F3F3;
-	font-size: 1em;
-	max-width: 700px;
-	margin: 0 auto;
+.pic {
+  margin-top:-3em;
+
+  border-radius:10em;
+
+  border: 2px solid #dddddd;
+  cursor:pointer;
 }
 
-/* End header name styling */
+@keyframes intro {
+  from {
+    height:0em;
+  }
 
-/* Set width of main body of CV */
-.container {
-	max-width: 700px;
-	padding: 0 50px;
-	margin: 0 auto;
+  to {
+    height: 6em;
+  }
 }
 
-/* End */
-
-/* Styling Basics (Name, Contact, About, Profiles) */
-
-#basics {
-	margin-bottom: 10px;
-	border-top: 1px #E2E2E2 solid;
-	border-bottom: 1px #E2E2E2 solid;
-}
-#basics h3 {
-	margin-top: 1.5em;
-	margin-bottom: 10px;
-}
-#basics .contact strong {
-	line-height: 1.3;
-	float: left;
-	width: 80px;
+.pic{
+  height: 6em;
+  transition: .3s;
 }
 
-.contact h3 {
-	padding-bottom: 10px;
+.pic:hover{
+  transform: translateY(20px) scale(2);
 }
 
-.website,
-.email,
-.phone {
-	margin-bottom: 10px;
-	float: left;
-	width: 50%;
+.pic:hover ~ .content-wrapper{
+  transform: translateY(75px);
 }
 
-.summary {
-	padding-top: 5px;
-	clear: both;
+header p {
+  text-align:center;
+
+  margin:0;
+
+  color: #212121;
 }
 
-#profiles {
-	overflow: hidden;
+.first-name {
+   font-size: 1.05em;
 }
 
-#profiles .item {
-	float: left;
-	width: 50%;
+.subtitle {
+  font-family: "Merriweather";
+  font-size:0.7em;
+  font-weight:500;
+  color: #424242;
 }
 
-.username{
-	margin-top: 10px;
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+
+  background-color:white;
+  width:60%;
+
+  padding:0.5em 0 0.5em 0;
+
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  border-radius: 3px;
+
+  text-align: center;
 }
 
-/* End 'Basics' Styling */
+/* Content Part */
 
-/* Work and volunteering experience styling */
+.content-wrapper {
+  padding-right: 7.25%;
+  padding-left: 7.25%;
+  transition: .3s;
+  padding-bottom: 20px;
 
-.work_date,
-.work_position,
-.work_website,
-.institution,
-.study_date,
-.qualification {
-	margin-bottom: 10px;
-	float: left;
-	width: 30%;
+  text-align: left;
 }
 
-.courses {
-	clear: both;
+.content {
+  display:table;
+  width:100%;
+
+  padding-top:1.5em;
+
+  /*border-top: 1px solid #eeeeee;*/
 }
 
-.dissertation {
-	margin-top: 10px;
+
+.work-listing .first-listing{
+  margin-top: 1.8em;
 }
 
-#work,
-#volunteer {
-	padding-bottom: 5px;
-	border-bottom: 1px #E2E2E2 solid;
+.content:last-child {
+  margin-bottom: 2em;
 }
 
-#work .item,
-#volunteer .item {
-	margin: 25px 0;
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
 }
 
-/* End work and volunteering */
-
-/* Skills, languages, interests and references styling */
-
-#skills {
-	margin-bottom: 10px;
-	border-bottom: 1px #E2E2E2 solid;
-	padding-bottom: 5px;
+.row {
+    display:table-row;
 }
 
-#skills .item,
-#languages .item {
-	margin: 0 0 25px 0;
+.row div {
+    display:table-cell;
 }
 
-#interests .item {
-	margin-bottom: 25px;
+.content-cat {
+  text-align:center;
+  vertical-align:middle;
+  font-variant:small-caps;
+
+  letter-spacing: 1px;
+
+  color: #212121;
+
+  font-family: "Merriweather";
+
+  width:25%;
 }
 
-#skills {
-	overflow: hidden;
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+
+  margin-bottom:0;
 }
 
-#languages .item,
-#interests .item,
-#skills .item {
-	float: left;
-	width: 50%;
+.content-text {
+  border-left:1px solid #dddddd;
+  transition: border 0.66s ease-in;
 }
 
-#references,
-#interests {
-	clear: both;
+.big-text {
+  vertical-align:top;
 }
 
-/* End styling */
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
 
-	</style>
-	
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-size:0.7em;
+
+  display:inline-block;
+
+}
+
+.content-text ul li:first-child {
+  width:35%;
+
+  color: #424242;
+
+  font-weight:600;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-size:0.7em;
+
+  color: #424242;
+
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-size:0.7em;
+  font-weight:400;
+
+  color: #424242;
+
+  margin-left:3.25em;
+  padding-left:0.5em;
+
+  border-left:1px solid #dddddd;
+}
+
+.assignment {
+  border-left: 1px solid #dddddd;
+}
+
+.education-listing > .heading {
+  font-weight:600;
+
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-print{
+  display: none;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:24%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+}
+
+div.content-text.skills-listing > p {
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+.no-nl{
+  display: inline-block;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.fa{
+  color: #000;
+}
+
+.network{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.7em;
+}
+
+@media(max-width:1400px) {
+  .paper {
+    width:80%;
+  }
+
+  .content-cat{
+    padding-left:2%;
+  }
+
+  .content-wrapper{
+    padding-right: 2%;
+  }
+}
+
+		</style>
+
+		<style media="screen">
+			@media(max-width:795px) {
+  .paper {
+    width:96%;
+  }
+
+  .pic{
+    cursor: auto;
+  }
+
+  .content-cat{
+    padding-left:1%;
+  }
+
+  .content-wrapper{
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .profiles-listing ul li, .profiles-listing ul li:first-child{
+    width: 49%;
+  }
+
+  .small-fullwidth-row{
+    display: block;
+  }
+
+  .small-fullwidth-row div{
+    display: block;
+    width:100%;
+  }
+
+  .small-fullwidth-row .content-text{
+    border-left: 2px solid #dddddd;
+  }
+
+  .small-center{
+    text-align: center;
+  }
+
+  .work-listing .first-listing{
+    margin-top: 0.45em;
+  }
+
+  .work-listing .small-center{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .top-content h3{
+    width: 100px;
+  }
+}
+
+		</style>
+
+		<style media="print">
+			
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+  font-size:12pt;
+  font-family: "Merriweather";
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h2{
+  margin-top:0em;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.pic{
+  height:4.2em;
+  width:4.2em;
+
+  transform: translate(-8em, 1.9em);
+}
+
+.profiles {
+  display:none;
+}
+
+.profiles-print{
+  display: table;
+}
+
+.content {
+  page-break-inside:avoid;
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:25%;
+  position: relative;
+  right: 4%;
+  color:black;
+}
+
+.content-cat p {
+  font-size:0.5em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.summary p{
+  color: black;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+
+		</style>
 	</head>
 	<body>
-	
-	<header>
-	<h1>Florian Silva</h1>
-	<h2>Ingénieur Devops et Big Data</h2>
-	</header>
+		<div class="resume-wrapper">
+			<article class="paper">
+				<img src="https://avatars.githubusercontent.com/u/10270633?v&#x3D;4" class="pic" alt="Florian Silva" />
+					<div class="content-wrapper">
+						<header>
+							<div class="header-content">
+								<div class="header-text">
+									<h2>Florian Silva</h2>
+									<p class="subtitle">Ingénieur Devops et Big Data</p>
+								</div>
+							</div>
+						</header>
+						<!-- CONTACT -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+								 <h3>Contact</h3>
+								</div>
+								<div class="content-text">
+										<ul>
+											<li>Email</li>
+											<li><a href="mailto:florian.silva@hotmail.fr">florian.silva@hotmail.fr</a></li>
+										</ul>
 
-	<div id="content" class="container">
-	<section id="basics">
-		<div class="contact">
-		<h3>Contact</h3>
-		<div class="email">
-			<strong>Email</strong>
-			florian.silva@hotmail.fr
-		</div>
-		</div>
-		<div class="summary">
-			<h3>About</h3>
-			<p>Informaticien, Gamer et Sportif, je suis issu du domaine Big data ou j&#x27;ai appris l&#x27;importance de l&#x27;automatisation pour déployer des systèmes distribués. J’affectionne beaucoup la mentalité de développement Open Source qui apporte une façon de travailler efficace et qui favorise un partage d’information plus clair.
-    Toujours à l’écoute et prêt à m&#x27;adapter, je cherche continuellement à améliorer mon travail et n&#x27;hésite pas à pousser et mettre en valeur une solution qui en vaut la peine.</p>
-		</div>
-		<section id="profiles">
-			<div class="item">
-				<strong class="network">
-					GitHub
-				</strong>
-				<div class="url">
-					<a href="https://github.com/florian0410">
-						florian0410
-					</a>
+
+								</div>
+							</div>
+						</section>
+
+						<!-- LOCATION -->
+
+
+						<!-- LANGUAGE -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+								 <h3>Languages</h3>
+								</div>
+								<div class="content-text">
+
+										<ul>
+
+												<li>Anglais</li>
+
+											<li>Professionel (TOEIC)</li>
+
+										</ul>
+										<ul>
+
+												<li>Espagnol</li>
+
+											<li>Elémentaire</li>
+
+										</ul>
+										<ul>
+
+												<li>Francais</li>
+
+											<li>Natif</li>
+
+										</ul>
+
+								</div>
+							</div>
+						</section>
+
+						<!-- PROFILES for website-->
+							<section class="content profiles top-content">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Profiles</h3>
+									</div>
+									<div class="content-text profiles-listing">
+										<ul>
+													<li>
+													<a href="https://github.com/florian0410" target="_blank">
+														<i class="fa fa-2x fa-github-square"></i>
+														<span class="network">GitHub</span>
+													</a>
+													</li>
+													<li>
+													<a href="https://www.linkedin.com/in/silvaflorian/" target="_blank">
+														<i class="fa fa-2x fa-linkedin-square"></i>
+														<span class="network">LinkedIn</span>
+													</a>
+													</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						<!-- PROFILES for print -->
+							<section class="content profiles-print">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Profiles</h3>
+									</div>
+									<div class="content-text">
+											<ul>
+												<li>GitHub</li>
+												<li><a href="https://github.com/florian0410">github.com/florian0410</a></li>
+											</ul>
+											<ul>
+												<li>LinkedIn</li>
+												<li><a href="https://www.linkedin.com/in/silvaflorian/">linkedin.com/in/silvaflorian/</a></li>
+											</ul>
+									</div>
+								</div>
+							</section>
+
+							<section class="content summary">
+								<div class="row small-fullwidth-row">
+									<div class="content-cat">
+									 <h3>About Me</h3>
+									</div>
+									<div class="content-text work-content">
+										<p>
+											Informaticien, Gamer et Sportif, je suis issu du domaine Big data ou j&#x27;ai appris l&#x27;importance de l&#x27;automatisation pour déployer des systèmes distribués. J’affectionne beaucoup la mentalité de développement Open Source qui apporte une façon de travailler efficace et qui favorise un partage d’information plus clair.
+    Toujours à l’écoute et prêt à m&#x27;adapter, je cherche continuellement à améliorer mon travail et n&#x27;hésite pas à pousser et mettre en valeur une solution qui en vaut la peine.
+										</p>
+									</div>
+								</div>
+							</section>
+
+								<section class="content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+											<h3>Work	Experience</h3>
+
+											<p><span class="no-nl">2020-09-01</span> to <span class="no-nl">2021-12-01</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center first-listing">
+													<strong>Ingénieur Système DevOps / SRE</strong> at <strong>CANAL+ Group</strong>
+											</p>
+
+											<p>Les problématiques principales de cette mission consistaient à migrer un ensemble d&#x27;applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.</p>
+
+												<p class="highlight">Développement des automatisations pour construire les images machine Cloud à l&#x27;aide de Packer, Ansible et Gitlab CI</p>
+												<p class="highlight">Paramétrage du cache dependency proxy de Gitlab pour les pulls d&#x27;images Docker</p>
+												<p class="highlight">Configuration et déploiement d&#x27;agents gitlab runner dédiés avec Terraform et Packer</p>
+												<p class="highlight">Automatisation des déploiements d&#x27;infrastructure à l&#x27;aide de modules Terraform dédiés aux applications</p>
+												<p class="highlight">Partage des application sur des réseaux privés séparés à l&#x27;aide de VPC endpoints (VPCe)</p>
+												<p class="highlight">Étude et mise en oeuvre d&#x27;une architecture Blue/Green et Canary avec  Terraform et les équilibreurs de charges AWS</p>
+												<p class="highlight">Accompagnement des équipes  sur la méthodologie open source avec l&#x27;usage des issues, merge requests, review de codes. Création de CI de vérification et validation de code à l&#x27;aide de pre-commit.</p>
+												<p class="highlight">Écriture régulière de documentation pour assurer un passage de connaissance optimal</p>
+												<p class="highlight">Contribution dans la communauté CloudPosse sur leur module Beanstalk en intégrant certains changements implémentés durant la mission. https://github.com/cloudposse/terraform-aws-elastic-beanstalk-environment</p>
+												<p class="highlight">Proposition d&#x27;une nouvelle manière de gérer et prioriser les tâche de l&#x27;équipe à l&#x27;aide des issues Gitlab</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2018-12-01</span> to <span class="no-nl">2020-03-01</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Datalab Admin/Devops</strong> at <strong>BNP Paribas Cardif</strong>
+											</p>
+
+											<p>La mission s&#x27;axe sur l&#x27;administration de la nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.</p>
+
+												<p class="highlight">Mise en œuvre d&#x27;une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de Domino</p>
+												<p class="highlight">Amélioration de la gestion du parc de serveurs avec Ansible</p>
+												<p class="highlight">Création d&#x27;une image docker pour permettre la connexion au datalake Hadoop</p>
+												<p class="highlight">Déploiement en production de modèles de Data science via Domino et Kubernetes</p>
+												<p class="highlight">Mise en place d&#x27;une gouvernance des données sur Domino Datalab et gestion des droits d&#x27;accés</p>
+												<p class="highlight">Réalisation d&#x27;opérations de debug sur le cluster Kubernetes de la solution</p>
+												<p class="highlight">Échanges avec les support Cloud et l’éditeur de Domino Datalab pour résolution de problèmes ou demandes de fonctionnalités</p>
+												<p class="highlight">Documentation des processus, outils et développements</p>
+												<p class="highlight">Mise en place d&#x27;une méthodologie agile avec un tableau Kanban et des réunions daily/weekly</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2017-09-01</span> to <span class="no-nl">2020-03-01</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Consultant Big Data, data engineer</strong> at <strong>Devoteam</strong>
+											</p>
+
+											<p>Les missions réalisées dans la période indiquée l&#x27;ont été en tant que consultant Devoteam.</p>
+
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2017-10-01</span> to <span class="no-nl">2018-12-01</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Devops Big Data</strong> at <strong>BNP Paribas</strong>
+											</p>
+
+											<p>L&#x27;objectif principal est de pouvoir industrialiser le processus de déploiement et l&#x27;évolution de l&#x27;offre Big Data groupe qui sera proposée.</p>
+
+												<p class="highlight">Reprise, nettoyage et amélioration de la stabilité du code Ansible pour déployer le cluster Hadoop</p>
+												<p class="highlight">Versioning et mise en place d’un système de release avec Gitlab, Gitlab CI</p>
+												<p class="highlight">Évolution de la documentation pour le delivery/run en passant de Word à Sphinx doc afin de permettre un affichage web et un versioning de celle-ci</p>
+												<p class="highlight">Refonte drastique de la documentation existante (Réécriture)</p>
+												<p class="highlight">Définition des règles de sécurité Ranger et politiques par défauts d’accès sur le cluster</p>
+												<p class="highlight">Passage en haute disponibilité et stabilisation du service de sécurité Kerberos</p>
+												<p class="highlight">Test et validation de la stabilité de l’architecture Hadoop (HDFS, Yarn, Hive, Kerberos…)</p>
+												<p class="highlight">Développement et automatisation de tests unitaires post installation</p>
+												<p class="highlight">Augmentation du nombre de nœuds et révision de la répartition des services pour assurer la stabilité du service en production.</p>
+												<p class="highlight">Création et déploiement avec Ansible de règles de supervision et d&#x27;alarmes de production Nimsoft et AutoSys</p>
+												<p class="highlight">Support aux équipes de delivery/run pour la mise en oeuvre des mécaniques de déploiement et corrections de problèmes</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2017-01-01</span> to <span class="no-nl">2017-07-01</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Industrialisation de système distribué pour la Haute disponibilité en continue des données – Devoteam (Stage)</strong> at <strong>Devoteam</strong>
+											</p>
+
+											<p>Durant ce stage, j&#x27;ai travaillé sur différents aspect des systèmes distribuées dans le cadre d&#x27;un projet d’industrialisation des montées en version d&#x27;une solution Hadoop</p>
+
+												<p class="highlight">Préparation et planification des tâches à réaliser durant le stage avec un diagramme de Gantt</p>
+												<p class="highlight">Déploiement d&#x27;un cluster Hadoop sans assistant, l&#x27;objectif étant de comprendre l&#x27;outil utilisé</p>
+												<p class="highlight">Automatisation des processus de déploiement et d&#x27;installation avec Ansible.</p>
+												<p class="highlight">Déploiement d&#x27;une solution distribuée HortonWorks</p>
+												<p class="highlight">Documentation des processus, outils et développements</p>
+												<p class="highlight">Mise en place de la haute disponibilité des données et services du cluster et d&#x27;une sécurité Kerberos</p>
+												<p class="highlight">Réalisation de mise à jour roulantes sur le cluster</p>
+												<p class="highlight">Compte rendu sur les capacités de l&#x27;outil à réaliser des mises à jour roulantes</p>
+
+								</div>
+							</div>
+						</section>
+
+
+								<section class="content">
+								<div class="row">
+									<div class="content-cat big-text">
+
+											<h3>Education</h3>
+
+												<p><span class="no-nl">2012-09-01</span> to <span class="no-nl">2017-09-01</span></p>
+
+									</div>
+									<div class="content-text work-listing education-listing">
+												<p class="heading first-listing">ESIEE Paris</p>
+
+											<p class="highlight">
+												Diplôme d&#x27;ingénieur:
+											<i>Data, réseau et internet des Objets</i>
+											</p>
+
+									</div>
+								</div>
+							</section>
+
+
+
+
+
+
+
+						<section class="content">
+							<div class="row">
+								<div class="content-cat">
+									<h3>Skills</h3>
+								</div>
+								<div class="content-text skills-listing">
+										<p>
+										<span class="name">
+											<strong>
+											Cloud:
+
+											</strong>
+										</span>
+
+
+												AWS, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, AWS ACM, AWS S3, AWS Lambda, AWS Route 53, AWS IAM, Openstack, Orange Cloud business (OCB)
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Devops:
+
+											</strong>
+										</span>
+
+
+												Gitlab CI, Gitlab, Git, Ansible, Terraform, Packer, Docker, Kubernetes
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Big data:
+
+											</strong>
+										</span>
+
+
+												Hadoop, Domino Datalab
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Systèmes:
+
+											</strong>
+										</span>
+
+
+												Linux, Bash
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Languages de programmation:
+
+											</strong>
+										</span>
+
+
+												C, Java, Python, HTML, HCL
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Documentation:
+
+											</strong>
+										</span>
+
+
+												Sphinx doc, Markdown, Confluence, reStructuredText
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Management:
+
+											</strong>
+										</span>
+
+
+												Animation, Kanban, Gantt, Scrum
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Securité:
+
+											</strong>
+										</span>
+
+
+												SSH, Kerberos, Certificats SSL, PGP, Ansible vault
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Bureautique:
+
+											</strong>
+										</span>
+
+
+												Microsoft Office, Micorosoft Teams, Slack, Discord, Google workspaces
+										</p>
+								</div>
+							</div>
+						</section>
+
+						<section class="content">
+							<div class="row">
+								<div class="content-cat">
+									<h3>Interests</h3>
+								</div>
+								<div class="content-text skills-listing">
+										<p>
+										<span class="name">
+											<strong>
+												Loisirs:
+											</strong>
+										</span>
+												Escalade, Association de jeux de société, Badminton, Photographie, Jeux vidéos, Festivals
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+												Voyages:
+											</strong>
+										</span>
+												Allemagne, Pologne, Suisse, Espagne, République dominicaine, Italie, Autriche, Bulgarie, Angleterre, Croatie, Grèce, Indonésie, Sénégal, USA, Japon
+										</p>
+								</div>
+							</div>
+						</section>
 				</div>
-			</div>
-			<div class="item">
-				<strong class="network">
-					LinkedIn
-				</strong>
-				<div class="url">
-					<a href="https://www.linkedin.com/in/silvaflorian/">
-						silvaflorian
-					</a>
-				</div>
-			</div>
-		</section>
-	</section>
-
-	<section id="work">
-		<h2>Work</h2>
-		<div class="item">
-			<h3 class="work_name">
-				CANAL+ Group
-			</h3>
-			
-			<div class="work_position">
-				Ingénieur Système DevOps / SRE
-			</div>
-
-			<div class="work_date">
-				<span class="startDate">
-					2020-09-01
-				</span>
-				<span class="endDate">
-					- 2021-12-01
-				</span>
-			</div>
-
-
-
-			<div class="summary">
-				<p>Les problématiques principales de cette mission consistaient à migrer un ensemble d&#x27;applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.</p>
-			</div>
-			<ul class="highlights">
-				<li>Développement des automatisations pour construire les images machine Cloud à l&#x27;aide de Packer, Ansible et Gitlab CI</li>
-				<li>Paramétrage du cache dependency proxy de Gitlab pour les pulls d&#x27;images Docker</li>
-				<li>Configuration et déploiement d&#x27;agents gitlab runner dédiés avec Terraform et Packer</li>
-				<li>Automatisation des déploiements d&#x27;infrastructure à l&#x27;aide de modules Terraform dédiés aux applications</li>
-				<li>Partage des application sur des réseaux privés séparés à l&#x27;aide de VPC endpoints (VPCe)</li>
-				<li>Étude et mise en oeuvre d&#x27;une architecture Blue/Green et Canary avec  Terraform et les équilibreurs de charges AWS</li>
-				<li>Accompagnement des équipes  sur la méthodologie open source avec l&#x27;usage des issues, merge requests, review de codes. Création de CI de vérification et validation de code à l&#x27;aide de pre-commit.</li>
-				<li>Écriture régulière de documentation pour assurer un passage de connaissance optimal</li>
-				<li>Contribution dans la communauté CloudPosse sur leur module Beanstalk en intégrant certains changements implémentés durant la mission. https://github.com/cloudposse/terraform-aws-elastic-beanstalk-environment</li>
-				<li>Proposition d&#x27;une nouvelle manière de gérer et prioriser les tâche de l&#x27;équipe à l&#x27;aide des issues Gitlab</li>
-			</ul>
+			</article>
 		</div>
-		<div class="item">
-			<h3 class="work_name">
-				BNP Paribas Cardif
-			</h3>
-			
-			<div class="work_position">
-				Datalab Admin/Devops
-			</div>
-
-			<div class="work_date">
-				<span class="startDate">
-					2018-12-01
-				</span>
-				<span class="endDate">
-					- 2020-03-01
-				</span>
-			</div>
-
-
-
-			<div class="summary">
-				<p>La mission s&#x27;axe sur l&#x27;administration de la nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.</p>
-			</div>
-			<ul class="highlights">
-				<li>Mise en œuvre d&#x27;une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de Domino</li>
-				<li>Amélioration de la gestion du parc de serveurs avec Ansible</li>
-				<li>Création d&#x27;une image docker pour permettre la connexion au datalake Hadoop</li>
-				<li>Déploiement en production de modèles de Data science via Domino et Kubernetes</li>
-				<li>Mise en place d&#x27;une gouvernance des données sur Domino Datalab et gestion des droits d&#x27;accés</li>
-				<li>Réalisation d&#x27;opérations de debug sur le cluster Kubernetes de la solution</li>
-				<li>Échanges avec les support Cloud et l’éditeur de Domino Datalab pour résolution de problèmes ou demandes de fonctionnalités</li>
-				<li>Documentation des processus, outils et développements</li>
-				<li>Mise en place d&#x27;une méthodologie agile avec un tableau Kanban et des réunions daily/weekly</li>
-			</ul>
-		</div>
-		<div class="item">
-			<h3 class="work_name">
-				Devoteam
-			</h3>
-			
-			<div class="work_position">
-				Consultant Big Data, data engineer
-			</div>
-
-			<div class="work_date">
-				<span class="startDate">
-					2017-09-01
-				</span>
-				<span class="endDate">
-					- 2020-03-01
-				</span>
-			</div>
-
-
-
-			<div class="summary">
-				<p>Les missions réalisées dans la période indiquée l&#x27;ont été en tant que consultant Devoteam.</p>
-			</div>
-		</div>
-		<div class="item">
-			<h3 class="work_name">
-				BNP Paribas
-			</h3>
-			
-			<div class="work_position">
-				Devops Big Data
-			</div>
-
-			<div class="work_date">
-				<span class="startDate">
-					2017-10-01
-				</span>
-				<span class="endDate">
-					- 2018-12-01
-				</span>
-			</div>
-
-
-
-			<div class="summary">
-				<p>L&#x27;objectif principal est de pouvoir industrialiser le processus de déploiement et l&#x27;évolution de l&#x27;offre Big Data groupe qui sera proposée.</p>
-			</div>
-			<ul class="highlights">
-				<li>Reprise, nettoyage et amélioration de la stabilité du code Ansible pour déployer le cluster Hadoop</li>
-				<li>Versioning et mise en place d’un système de release avec Gitlab, Gitlab CI</li>
-				<li>Évolution de la documentation pour le delivery/run en passant de Word à Sphinx doc afin de permettre un affichage web et un versioning de celle-ci</li>
-				<li>Refonte drastique de la documentation existante (Réécriture)</li>
-				<li>Définition des règles de sécurité Ranger et politiques par défauts d’accès sur le cluster</li>
-				<li>Passage en haute disponibilité et stabilisation du service de sécurité Kerberos</li>
-				<li>Test et validation de la stabilité de l’architecture Hadoop (HDFS, Yarn, Hive, Kerberos…)</li>
-				<li>Développement et automatisation de tests unitaires post installation</li>
-				<li>Augmentation du nombre de nœuds et révision de la répartition des services pour assurer la stabilité du service en production.</li>
-				<li>Création et déploiement avec Ansible de règles de supervision et d&#x27;alarmes de production Nimsoft et AutoSys</li>
-				<li>Support aux équipes de delivery/run pour la mise en oeuvre des mécaniques de déploiement et corrections de problèmes</li>
-			</ul>
-		</div>
-		<div class="item">
-			<h3 class="work_name">
-				Devoteam
-			</h3>
-			
-			<div class="work_position">
-				Industrialisation de système distribué pour la Haute disponibilité en continue des données – Devoteam (Stage)
-			</div>
-
-			<div class="work_date">
-				<span class="startDate">
-					2017-01-01
-				</span>
-				<span class="endDate">
-					- 2017-07-01
-				</span>
-			</div>
-
-
-
-			<div class="summary">
-				<p>Durant ce stage, j&#x27;ai travaillé sur différents aspect des systèmes distribuées dans le cadre d&#x27;un projet d’industrialisation des montées en version d&#x27;une solution Hadoop</p>
-			</div>
-			<ul class="highlights">
-				<li>Préparation et planification des tâches à réaliser durant le stage avec un diagramme de Gantt</li>
-				<li>Déploiement d&#x27;un cluster Hadoop sans assistant, l&#x27;objectif étant de comprendre l&#x27;outil utilisé</li>
-				<li>Automatisation des processus de déploiement et d&#x27;installation avec Ansible.</li>
-				<li>Déploiement d&#x27;une solution distribuée HortonWorks</li>
-				<li>Documentation des processus, outils et développements</li>
-				<li>Mise en place de la haute disponibilité des données et services du cluster et d&#x27;une sécurité Kerberos</li>
-				<li>Réalisation de mise à jour roulantes sur le cluster</li>
-				<li>Compte rendu sur les capacités de l&#x27;outil à réaliser des mises à jour roulantes</li>
-			</ul>
-		</div>
-	</section>
-
-	
-	<section id="education">
-		<h2>Education</h2>
-		<div class="item">
-			
-			<div class="institution">
-				ESIEE Paris
-			</div>
-
-			<div class="study_date">
-				<span class="startDate">
-					2012-09-01
-				</span>
-				<span class="endDate">
-					- 2017-09-01
-				</span>
-			</div>
-
-
-
-		</div>
-	</section>
-	
-	<section id="skills">
-		<h2>Skills</h2>
-		<div class="item">
-			<div class="name">
-				Cloud
-			</div>
-			<ul class="keywords">
-				<li>AWS</li>
-				<li>AWS SSM</li>
-				<li>AWS ELB</li>
-				<li>AWS EC2</li>
-				<li>AWS Elastic Beanstalk</li>
-				<li>AWS ECR</li>
-				<li>AWS ACM</li>
-				<li>AWS S3</li>
-				<li>AWS Lambda</li>
-				<li>AWS Route 53</li>
-				<li>AWS IAM</li>
-				<li>Openstack</li>
-				<li>Orange Cloud business (OCB)</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Devops
-			</div>
-			<ul class="keywords">
-				<li>Gitlab CI</li>
-				<li>Gitlab</li>
-				<li>Git</li>
-				<li>Ansible</li>
-				<li>Terraform</li>
-				<li>Packer</li>
-				<li>Docker</li>
-				<li>Kubernetes</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Big data
-			</div>
-			<ul class="keywords">
-				<li>Hadoop</li>
-				<li>Domino Datalab</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Systèmes
-			</div>
-			<ul class="keywords">
-				<li>Linux</li>
-				<li>Bash</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Languages de programmation
-			</div>
-			<ul class="keywords">
-				<li>C</li>
-				<li>Java</li>
-				<li>Python</li>
-				<li>HTML</li>
-				<li>HCL</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Documentation
-			</div>
-			<ul class="keywords">
-				<li>Sphinx doc</li>
-				<li>Markdown</li>
-				<li>Confluence</li>
-				<li>reStructuredText</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Management
-			</div>
-			<ul class="keywords">
-				<li>Animation</li>
-				<li>Kanban</li>
-				<li>Gantt</li>
-				<li>Scrum</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Securité
-			</div>
-			<ul class="keywords">
-				<li>SSH</li>
-				<li>Kerberos</li>
-				<li>Certificats SSL</li>
-				<li>PGP</li>
-				<li>Ansible vault</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Bureautique
-			</div>
-			<ul class="keywords">
-				<li>Microsoft Office</li>
-				<li>Micorosoft Teams</li>
-				<li>Slack</li>
-				<li>Discord</li>
-				<li>Google workspaces</li>
-			</ul>
-		</div>
-	</section>
-
-	<section id="languages">
-		<h2>Languages</h2>
-		<div class="item">
-			<div class="language">
-				Anglais
-			</div>
-			<div class="level">
-				<em>Professionel (TOEIC)</em>
-			</div>
-		</div>
-		<div class="item">
-			<div class="language">
-				Espagnol
-			</div>
-			<div class="level">
-				<em>Elémentaire</em>
-			</div>
-		</div>
-		<div class="item">
-			<div class="language">
-				Francais
-			</div>
-			<div class="level">
-				<em>Natif</em>
-			</div>
-		</div>
-	</section>
-
-	<section id="interests">
-		<h2>Interests</h2>
-		<div class="item">
-			<div class="name">
-				Loisirs
-			</div>
-			<ul class="keywords">
-				<li>Escalade</li>
-				<li>Association de jeux de société</li>
-				<li>Badminton</li>
-				<li>Photographie</li>
-				<li>Jeux vidéos</li>
-				<li>Festivals</li>
-			</ul>
-		</div>
-		<div class="item">
-			<div class="name">
-				Voyages
-			</div>
-			<ul class="keywords">
-				<li>Allemagne</li>
-				<li>Pologne</li>
-				<li>Suisse</li>
-				<li>Espagne</li>
-				<li>République dominicaine</li>
-				<li>Italie</li>
-				<li>Autriche</li>
-				<li>Bulgarie</li>
-				<li>Angleterre</li>
-				<li>Croatie</li>
-				<li>Grèce</li>
-				<li>Indonésie</li>
-				<li>Sénégal</li>
-				<li>USA</li>
-				<li>Japon</li>
-			</ul>
-		</div>
-	</section>
-	
-	
-	</div>
 	</body>
 </html>
