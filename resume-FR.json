@@ -60,7 +60,7 @@
       "yearsOfExperience": null
     },
     {
-      "name": "Build Test Deploy",
+      "name": "Devops",
       "level": "",
       "keywords": [
         "Gitlab CI",
@@ -68,15 +68,7 @@
         "Git",
         "Ansible",
         "Terraform",
-        "Packer"
-      ],
-      "rating": 0,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "Conteneurisation",
-      "level": "",
-      "keywords": [
+        "Packer",
         "Docker",
         "Kubernetes"
       ],
@@ -133,7 +125,9 @@
       "level": "",
       "keywords": [
         "Animation",
-        "Kanban"
+        "Kanban",
+        "Gantt",
+        "Scrum"
       ],
       "rating": 0,
       "yearsOfExperience": null
@@ -178,7 +172,7 @@
       "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.",
       "skillsUsed":"Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",      
       "highlights": [
-        "Développement des automatisations pour construire les images machine Cloud à l'aide de Packer et Gitlab CI",
+        "Développement des automatisations pour construire les images machine Cloud à l'aide de Packer, Ansible et Gitlab CI",
         "Paramétrage du cache dependency proxy de Gitlab pour les pulls d'images Docker",
         "Configuration et déploiement d'agents gitlab runner dédiés avec Terraform et Packer",
         "Automatisation des déploiements d'infrastructure à l'aide de modules Terraform dédiés aux applications",
@@ -212,10 +206,10 @@
       "summary": "La mission s'axe sur l'administration de la nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.",
       "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",      
       "highlights": [
-        "Mise en œuvre d'une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de la solution",
+        "Mise en œuvre d'une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de Domino",
         "Amélioration de la gestion du parc de serveurs avec Ansible",
         "Création d'une image docker pour permettre la connexion au datalake Hadoop",
-        "Mise en production de modèles de Data science via Domino et Kubernetes",
+        "Déploiement en production de modèles de Data science via Domino et Kubernetes",
         "Mise en place d'une gouvernance des données sur Domino Datalab et gestion des droits d'accés",
         "Réalisation d'opérations de debug sur le cluster Kubernetes de la solution",
         "Échanges avec les support Cloud et l’éditeur de Domino Datalab pour résolution de problèmes ou demandes de fonctionnalités",
@@ -273,10 +267,11 @@
         "Évolution de la documentation pour le delivery/run en passant de Word à Sphinx doc afin de permettre un affichage web et un versioning de celle-ci",
         "Refonte drastique de la documentation existante (Réécriture)",
         "Définition des règles de sécurité Ranger et politiques par défauts d’accès sur le cluster",
+        "Passage en haute disponibilité et stabilisation du service de sécurité Kerberos",
         "Test et validation de la stabilité de l’architecture Hadoop (HDFS, Yarn, Hive, Kerberos…)",
         "Développement et automatisation de tests unitaires post installation",
         "Augmentation du nombre de nœuds et révision de la répartition des services pour assurer la stabilité du service en production.",
-        "Création de règles de supervision et d'alarmes de production Nimsoft et AutoSys, automatisation de leur déploiement avec Ansible",
+        "Création et déploiement avec Ansible de règles de supervision et d'alarmes de production Nimsoft et AutoSys",
         "Support aux équipes de delivery/run pour la mise en oeuvre des mécaniques de déploiement et corrections de problèmes"
       ],
       "isCurrentRole": false,

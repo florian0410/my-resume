@@ -68,15 +68,7 @@
         "Git",
         "Ansible",
         "Terraform",
-        "Packer"
-      ],
-      "rating": 0,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "Containerization",
-      "level": "",
-      "keywords": [
+        "Packer",
         "Docker",
         "Kubernetes"
       ],
@@ -133,7 +125,9 @@
       "level": "",
       "keywords": [
         "Animation",
-        "Kanban"
+        "Kanban",
+        "Gantt",
+        "Scrum"
       ],
       "rating": 0,
       "yearsOfExperience": null
@@ -178,7 +172,7 @@
       "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.",
       "skillsUsed":"Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",
       "highlights": [
-        "Developing automations to build Cloud machine images using Packer and Gitlab CI",
+        "Developing automations to build Cloud machine images using Packer, Ansible and Gitlab CI",
         "Setting up Gitlab's cache dependency proxy for Docker image pulls",
         "Configuration and deployment of dedicated gitlab runner agents with Terraform and Packer",
         "Automating infrastructure deployments with dedicated Terraform modules for applications",
@@ -212,15 +206,15 @@
       "summary": "The mission focuses on the administration of the new Domino Datalab Big Data platform in the Orange OCB Cloud.",
       "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache, Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",
       "highlights": [
-        "Implemented ETL mechanics with Docker and Python code to enable group data import within the solution",
+        "Implemented ETL mechanics with Docker and Python code to enable group data import within Domino",
         "Improved servers fleet management with Ansible",
         "Created a Docker image to allow connection to the Hadoop datalake.",
-        "Putting data science models into production via the Domino and Kubernetes",
+        "Production deployment of data science models via Domino and Kubernetes",
         "Implementation of a data governance on Domino Datalab and management of access rights",
         "Performing debugging operations on the Kubernetes cluster of the solution",
         "Exchanges with the Cloud support and the editor of Domino Datalab to resolve problems or requests for features",
         "Documentation of processes, tools and developments",
-        "Implementation of an agile methodology with a Kanban board and daily/weekly meetings"
+        "Establishment of an agile methodology with a Kanban board and daily/weekly meetings"
       ],
       "isCurrentRole": false,
       "start": {
@@ -273,10 +267,11 @@
         "Evolution of the documentation for delivery/run by moving from Word to Sphinx doc to allow web display and versioning of it",
         "Drastic overhaul of existing documentation (Rewriting)",
         "Definition of the Ranger security rules and policies by default access on the cluster",
+        "Moving to high availability and stabilizing the Kerberos security service",
         "Testing and validation of the stability of the Hadoop architecture (HDFS, Yarn, Hive, Kerberos...)",
         "Development and automation of post installation unit tests",
         "Increasing the number of nodes and revising the service distribution to ensure service stability in production. ",
-        "Creating Nimsoft and AutoSys production monitoring and alarm rules, automating their deployment with Ansible",
+        "Creation and deployment with Ansible of Nimsoft and AutoSys production monitoring and alarm rules",
         "Support for delivery/run teams for the implementation of deployment mechanisms and problem corrections"
       ],
       "isCurrentRole": false,
