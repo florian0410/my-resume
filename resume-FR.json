@@ -290,7 +290,39 @@
       },
       "company": "BNP Paribas",
       "website": ""
-    }
+    },
+    {
+      "name": "Devoteam",
+      "location": "Montreuil, 93100, France",
+      "description": "",
+      "position": "Industrialisation de système distribué pour la Haute disponibilité en continue des données – Devoteam (Stage)",
+      "url": "",
+      "startDate": "2017-01-01",
+      "endDate": "2017-07-01",
+      "summary": "Durant ce stage, j'ai travaillé sur différents aspect des systèmes distribuées dans le cadre d'un projet d’industrialisation des montées en version d'une solution Hadoop",
+      "skillsUsed":"Hadoop, Ansible, Gitlab, Gantt, Linux, Kerberos",
+      "highlights": [
+        "Préparation et planification des tâches à réaliser durant le stage avec un diagramme de Gantt",
+        "Déploiement d'un cluster Hadoop sans assistant, l'objectif étant de comprendre l'outil utilisé",
+        "Automatisation des processus de déploiement et d'installation avec Ansible.",
+        "Déploiement d'une solution distribuée HortonWorks",
+        "Documentation des processus, outils et développements",
+        "Mise en place de la haute disponibilité des données et services du cluster et d'une sécurité Kerberos",
+        "Réalisation de mise à jour roulantes sur le cluster",
+        "Compte rendu sur les capacités de l'outil à réaliser des mises à jour roulantes"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2017,
+        "month": 1
+      },
+      "end": {
+        "year": 2018,
+        "month": 7
+      },
+      "company": "Devoteam",
+      "website": ""
+    }    
   ],
   "publications": [],
   "education": [

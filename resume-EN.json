@@ -290,6 +290,38 @@
       },
       "company": "BNP Paribas",
       "website": ""
+    },
+    {
+      "name": "Devoteam",
+      "location": "Montreuil, 93100, France",
+      "description": "",
+      "position": "Industrialization of distributed systems for continuous high availability of data - Devoteam (Internship)",
+      "url": "",
+      "startDate": "2017-01-01",
+      "endDate": "2017-07-01",
+      "summary": "During this internship, I worked on different aspects of distributed systems as part of a project to industrialize the upgrades of a Hadoop solution",
+      "skillsUsed":"Hadoop, Ansible, Gitlab, Gantt, Linux, Kerberos",
+      "highlights": [
+        "Preparation and planning of the tasks to be done during the internship with a Gantt chart",
+        "Deploying a Hadoop cluster without a wizard, the objective being to understand the tool used",
+        "Automation of deployment and installation processes with Ansible",
+        "Deployment of a distributed HortonWorks solution",
+        "Documentation of processes, tools and developments",
+        "Implementation of high availability of data and services of the cluster and of a Kerberos security",
+        "Realization of rolling upgrades on the cluster",
+        "Report on the tool's capabilities to perform rolling updates"
+       ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2017,
+        "month": 1
+      },
+      "end": {
+        "year": 2018,
+        "month": 7
+      },
+      "company": "Devoteam",
+      "website": ""
     }
   ],
   "publications": [],
