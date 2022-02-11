@@ -1,0 +1,431 @@
+{
+  "basics": {
+    "name": "Florian Silva",
+    "label": "Ingénieur Devops et Big Data",
+    "image": "https://avatars.githubusercontent.com/u/10270633?v=4",
+    "email": "florian.silva@hotmail.fr",
+    "phone": "",
+    "url": null,
+    "summary": "Informaticien, Gamer et Sportif, je suis issu du domaine Big data ou j'ai appris l'importance de l'automatisation pour déployer des systèmes distribués. J’affectionne beaucoup la mentalité de développement Open Source qui apporte une façon de travailler efficace et qui favorise un partage d’information plus clair.\n    Toujours à l’écoute et prêt à m'adapter, je cherche continuellement à améliorer mon travail et n'hésite pas à pousser et mettre en valeur une solution qui en vaut la peine.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "florian0410",
+        "url": "https://github.com/florian0410"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/silvaflorian/",
+        "username": "silvaflorian"
+      }
+    ],
+    "headline": "Il est nécessaire d'avoir de la tolérance et la capacité de trouver du plaisir à chaque moment de notre vie",
+    "blog": null,
+    "yearsOfExperience": null,
+    "username": "florian0410",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "FR",
+      "region": "France"
+    },
+    "karma": 12,
+    "id": "d44270c2-2279-4c1e-a0ea-fae9472c0d6b",
+    "followers": 0,
+    "following": 1,
+    "picture": "https://avatars.githubusercontent.com/u/10270633?v=4",
+    "website": null
+  },
+  "skills": [
+    {
+      "name": "Cloud",
+      "level": "",
+      "keywords": [
+        "AWS",
+        "AWS SSM",
+        "AWS ELB",
+        "AWS EC2",
+        "AWS Elastic Beanstalk",
+        "AWS ECR",
+        "AWS ACM",
+        "AWS S3",
+        "AWS Lambda",
+        "AWS Route 53",
+        "AWS IAM",
+        "Openstack",
+        "Orange Cloud business (OCB)"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Devops",
+      "level": "",
+      "keywords": [
+        "Gitlab CI",
+        "Gitlab",
+        "Git",
+        "Ansible",
+        "Terraform",
+        "Packer",
+        "Docker",
+        "Kubernetes"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Big data",
+      "level": "",
+      "keywords": [
+        "Hadoop",
+        "Domino Datalab"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Systèmes",
+      "level": "",
+      "keywords": [
+        "Linux",
+        "Bash"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Languages de programmation",
+      "level": "",
+      "keywords": [
+        "C",
+        "Java",
+        "Python",
+        "HTML",
+        "HCL"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Documentation",
+      "level": "",
+      "keywords": [
+        "Sphinx doc",
+        "Markdown",
+        "Confluence",
+        "reStructuredText"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Management",
+      "level": "",
+      "keywords": [
+        "Animation",
+        "Kanban",
+        "Gantt",
+        "Scrum"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Securité",
+      "level": "",
+      "keywords": [
+        "SSH",
+        "Kerberos",
+        "Certificats SSL",
+        "PGP",
+        "Ansible vault"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Bureautique",
+      "level": "",
+      "keywords": [
+        "Microsoft Office",
+        "Micorosoft Teams",
+        "Slack",
+        "Discord",
+        "Google workspaces"
+      ],
+      "rating": 0,
+      "yearsOfExperience": null
+    }
+  ],
+  "projects": [],
+  "work": [
+    {
+      "name": "CANAL+ Group",
+      "location": "Paris, Issy les Moulineaux, France",
+      "description": "",
+      "position": "Ingénieur Système DevOps / SRE",
+      "url": "",
+      "startDate": "2020-09-01",
+      "endDate": "2021-12-01",
+      "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.",
+      "skillsUsed":"Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",      
+      "highlights": [
+        "Développement des automatisations pour construire les images machine Cloud à l'aide de Packer, Ansible et Gitlab CI",
+        "Paramétrage du cache dependency proxy de Gitlab pour les pulls d'images Docker",
+        "Configuration et déploiement d'agents gitlab runner dédiés avec Terraform et Packer",
+        "Automatisation des déploiements d'infrastructure à l'aide de modules Terraform dédiés aux applications",
+        "Partage des application sur des réseaux privés séparés à l'aide de VPC endpoints (VPCe)",
+        "Étude et mise en oeuvre d'une architecture Blue/Green et Canary avec  Terraform et les équilibreurs de charges AWS",
+        "Accompagnement des équipes  sur la méthodologie open source avec l'usage des issues, merge requests, review de codes. Création de CI de vérification et validation de code à l'aide de pre-commit.",
+        "Écriture régulière de documentation pour assurer un passage de connaissance optimal",
+        "Contribution dans la communauté CloudPosse sur leur module Beanstalk en intégrant certains changements implémentés durant la mission. https://github.com/cloudposse/terraform-aws-elastic-beanstalk-environment",
+        "Proposition d'une nouvelle manière de gérer et prioriser les tâche de l'équipe à l'aide des issues Gitlab"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2020,
+        "month": 9
+      },
+      "end": {
+        "year": 2021,
+        "month": 12
+      },
+      "company": "CANAL+ Group",
+      "website": ""
+    },
+    {
+      "name": "BNP Paribas Cardif",
+      "location": "Nanterre, 92000, France",
+      "description": "",
+      "position": "Datalab Admin/Devops",
+      "url": "",
+      "startDate": "2018-12-01",
+      "endDate": "2020-03-01",
+      "summary": "La mission s'axe sur l'administration de la nouvelle plateforme Big Data Domino Datalab dans le Cloud Orange OCB.",
+      "skillsUsed":"Scrum, JIRA, Linux (Rhel), Windows, Docker, OCB, Kubernetes, Yaml, Shell, Terraform, Gitlab, Apache Nginx, Grafana, Prometheus, Domino Datalab, Apache airflow, Python, Hadoop HDP 2.6, XFB gateway, SaltStack",      
+      "highlights": [
+        "Mise en œuvre d'une mécanique ETL avec Docker et du code Python pour permettre l’import de données groupe au sein de Domino",
+        "Amélioration de la gestion du parc de serveurs avec Ansible",
+        "Création d'une image docker pour permettre la connexion au datalake Hadoop",
+        "Déploiement en production de modèles de Data science via Domino et Kubernetes",
+        "Mise en place d'une gouvernance des données sur Domino Datalab et gestion des droits d'accés",
+        "Réalisation d'opérations de debug sur le cluster Kubernetes de la solution",
+        "Échanges avec les support Cloud et l’éditeur de Domino Datalab pour résolution de problèmes ou demandes de fonctionnalités",
+        "Documentation des processus, outils et développements",
+        "Mise en place d'une méthodologie agile avec un tableau Kanban et des réunions daily/weekly"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2018,
+        "month": 12
+      },
+      "end": {
+        "year": 2020,
+        "month": 3
+      },
+      "company": "BNP Paribas Cardif",
+      "website": ""
+    },
+    {
+      "name": "Devoteam",
+      "location": "",
+      "description": "",
+      "position": "Consultant Big Data, data engineer",
+      "url": "",
+      "startDate": "2017-09-01",
+      "endDate": "2020-03-01",
+      "summary": "Les missions réalisées dans la période indiquée l'ont été en tant que consultant Devoteam.",
+      "skillsUsed":"",            
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2017,
+        "month": 9
+      },
+      "end": {
+        "year": 2020,
+        "month": 3
+      },
+      "company": "Devoteam",
+      "website": ""
+    },
+    {
+      "name": "BNP Paribas - BP2I",
+      "location": "Montreuil, 93100, France",
+      "description": "",
+      "position": "Devops Big Data",
+      "url": "",
+      "startDate": "2017-10-01",
+      "endDate": "2018-12-01",
+      "summary": "L'objectif principal est de pouvoir industrialiser le processus de déploiement et l'évolution de l'offre Big Data groupe qui sera proposée.",
+      "skillsUsed":"Scrum (Kanban + Sprints), JIRA, GitOps, Linux (Rhel, Ubuntu), Windows, Yaml, Shell, Gitlab, Jenkins, Nexus, Sonar, Oracle Exadata, Hue, Jupyterlab, Stack HDP 2.6, Nimsoft, Sphinx doc, autosys, Ansible, Python, Cloud interne, SSH, Kerberos",
+      "highlights": [
+        "Reprise, nettoyage et amélioration de la stabilité du code Ansible pour déployer le cluster Hadoop",
+        "Versioning et mise en place d’un système de release avec Gitlab, Gitlab CI",
+        "Évolution de la documentation pour le delivery/run en passant de Word à Sphinx doc afin de permettre un affichage web et un versioning de celle-ci",
+        "Refonte drastique de la documentation existante (Réécriture)",
+        "Définition des règles de sécurité Ranger et politiques par défauts d’accès sur le cluster",
+        "Passage en haute disponibilité et stabilisation du service de sécurité Kerberos",
+        "Test et validation de la stabilité de l’architecture Hadoop (HDFS, Yarn, Hive, Kerberos…)",
+        "Développement et automatisation de tests unitaires post installation",
+        "Augmentation du nombre de nœuds et révision de la répartition des services pour assurer la stabilité du service en production.",
+        "Création et déploiement avec Ansible de règles de supervision et d'alarmes de production Nimsoft et AutoSys",
+        "Support aux équipes de delivery/run pour la mise en oeuvre des mécaniques de déploiement et corrections de problèmes"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2017,
+        "month": 10
+      },
+      "end": {
+        "year": 2018,
+        "month": 12
+      },
+      "company": "BNP Paribas",
+      "website": ""
+    },
+    {
+      "name": "Devoteam",
+      "location": "Montreuil, 93100, France",
+      "description": "",
+      "position": "Industrialisation de système distribué pour la Haute disponibilité en continue des données – Devoteam (Stage)",
+      "url": "",
+      "startDate": "2017-01-01",
+      "endDate": "2017-07-01",
+      "summary": "Durant ce stage, j'ai travaillé sur différents aspect des systèmes distribuées dans le cadre d'un projet d’industrialisation des montées en version d'une solution Hadoop",
+      "skillsUsed":"Hadoop, Ansible, Gitlab, Gantt, Linux, Kerberos",
+      "highlights": [
+        "Préparation et planification des tâches à réaliser durant le stage avec un diagramme de Gantt",
+        "Déploiement d'un cluster Hadoop sans assistant, l'objectif étant de comprendre l'outil utilisé",
+        "Automatisation des processus de déploiement et d'installation avec Ansible.",
+        "Déploiement d'une solution distribuée HortonWorks",
+        "Documentation des processus, outils et développements",
+        "Mise en place de la haute disponibilité des données et services du cluster et d'une sécurité Kerberos",
+        "Réalisation de mise à jour roulantes sur le cluster",
+        "Compte rendu sur les capacités de l'outil à réaliser des mises à jour roulantes"
+      ],
+      "isCurrentRole": false,
+      "start": {
+        "year": 2017,
+        "month": 1
+      },
+      "end": {
+        "year": 2018,
+        "month": 7
+      },
+      "company": "Devoteam",
+      "website": ""
+    }    
+  ],
+  "publications": [],
+  "education": [
+    {
+      "institution": "ESIEE Paris",
+      "url": "",
+      "area": "Data, réseau et internet des Objets",
+      "studyType": "Diplôme d'ingénieur",
+      "startDate": "2012-09-01",
+      "endDate": "2017-09-01",
+      "score": "",
+      "courses": [],
+      "description": "",
+      "activities": "",
+      "start": {
+        "year": 2012,
+        "month": 9
+      },
+      "end": {
+        "year": 2017,
+        "month": 9
+      },
+      "website": "",
+      "gpa": ""
+    }
+  ],
+  "volunteer": [],
+  "awards": [],
+  "languages": [
+    {
+      "language": "Anglais",
+      "fluency": "Professionel (TOEIC)"
+    },
+    {
+      "language": "Espagnol",
+      "fluency": "Elémentaire"
+    },
+    {
+      "language": "Francais",
+      "fluency": "Natif"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Loisirs",
+      "keywords": [
+        "Escalade",
+        "Association de jeux de société",
+        "Badminton",
+        "Photographie",
+        "Jeux vidéos",
+        "Festivals"
+      ]
+    },
+    {
+      "name": "Voyages",
+      "keywords": [
+        "Allemagne",
+        "Pologne",
+        "Suisse",
+        "Espagne",
+        "République dominicaine",
+        "Italie",
+        "Autriche",
+        "Bulgarie",
+        "Angleterre",
+        "Croatie",
+        "Grèce",
+        "Indonésie",
+        "Sénégal",
+        "USA",
+        "Japon"
+      ]
+    }
+  ],
+  "references": [],
+  "certificates": [
+    {
+      "name": "HDP Certified Administrator (HDPCA) Exam",
+      "issuer": "Hortonworks",
+      "date": "",
+      "url": "",
+      "summary": "",
+      "fullDate": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "website": ""
+    },
+    {
+      "name": "GitLab Certified Associate",
+      "issuer": "GitLab",
+      "date": "",
+      "url": "",
+      "summary": "",
+      "fullDate": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "website": ""
+    }
+  ],
+  "meta": {
+    "note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2020-12-29T15:53:00"
+  }
+}
