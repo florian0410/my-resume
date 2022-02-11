@@ -20,3 +20,5 @@ For base json file: https://jsonresume.org/getting-started/, we will use this ba
 - Translation using gitlocalize ? https://gitlocalize.com/
 - Use Deepl API to translate some fields ? https://www.deepl.com/fr/docs-api/
   - How to translate only certain fields ?
+- Field last update ?
+- Help me push these issues ?
