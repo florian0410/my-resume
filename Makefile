@@ -12,7 +12,7 @@ docker_build_command:
 	docker build . -t $(DOCKER_IMAGE_NAME)
 
 docker_run_command:
-	docker run -u node -v $(PWD):/data -it $(DOCKER_IMAGE_NAME) /bin/sh
+	docker run -v $(PWD):/data -it $(DOCKER_IMAGE_NAME) /bin/sh
 
 install-env:
 	npm install -g resume-cli

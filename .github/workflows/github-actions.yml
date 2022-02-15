@@ -8,8 +8,10 @@ on:
 jobs:
   build_resume:
     runs-on: ubuntu-20.04
-    container: yupiter/my-resume
+    container: 
+      image: yupiter/my-resume
+      options: --user 1001 # github actions user since default is node
     steps:
-      - uses: actions/checkout@v2
       - run: ls -a -l && pwd
+      - uses: actions/checkout@v2
       - run: make build_html
