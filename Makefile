@@ -8,13 +8,13 @@ SOURCE_FILE_ENGLISH=$(FILENAME)-EN.json
 OUTFILE_FRENCH=$(FILENAME)-FR
 OUTFILE_ENGLISH=$(FILENAME)-EN
 
-docker_build_command:
+docker_build:
 	docker build . -t $(DOCKER_IMAGE_NAME)
 
-docker_run_command:
+docker_run:
 	docker run -v $(PWD):/data -it $(DOCKER_IMAGE_NAME) /bin/sh
 
-docker_push_command:
+docker_push:
 	 docker push $(DOCKER_IMAGE_NAME)
 
 install-env:
