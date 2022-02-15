@@ -1,0 +1,20 @@
+name: Build resume html
+on: 
+  pull_request:
+  push: 
+    branches: 
+      - main
+
+jobs:
+  build_resume:
+    runs-on: ubuntu-20.04
+    container: 
+      image: yupiter/my-resume
+      options: --user 1001 # github actions user since default is node
+    steps:
+      - uses: actions/checkout@v2
+      - run: make build_html
+      - uses: stefanzweifel/git-auto-commit-action@v4 # Push html resulting files
+        with:
+          commit_message: "Upload html files to repo"
+          file_pattern: docs/*
