@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-20.04
     container: yupiter/my-resume
     steps:
+      - run: ls
       - run: make build_html
