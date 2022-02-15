@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-20.04
     container: yupiter/my-resume
     steps:
-      - run: ls
+      - run: ls -a -l && pwd
       - run: make build_html
