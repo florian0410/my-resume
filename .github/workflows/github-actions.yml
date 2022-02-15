@@ -12,6 +12,9 @@ jobs:
       image: yupiter/my-resume
       options: --user 1001 # github actions user since default is node
     steps:
-      - run: ls -a -l && pwd
       - uses: actions/checkout@v2
       - run: make build_html
+      - uses: actions/upload-artifact@v2 # Push html resulting files
+        with:
+          name: html_resume
+          path: docs/
