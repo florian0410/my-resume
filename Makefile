@@ -1,4 +1,4 @@
-DOCKER_IMAGE_NAME=my-resume
+DOCKER_IMAGE_NAME=yupiter/my-resume
 JSON_RESUME_THEME=paper-plus-plus
 FILENAME=resume
 PAGES_FOLDER=docs
@@ -13,6 +13,9 @@ docker_build_command:
 
 docker_run_command:
 	docker run -v $(PWD):/data -it $(DOCKER_IMAGE_NAME) /bin/sh
+
+docker_push_command:
+	 docker push $(DOCKER_IMAGE_NAME)
 
 install-env:
 	npm install -g resume-cli
