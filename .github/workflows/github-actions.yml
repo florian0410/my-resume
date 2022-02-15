@@ -1,5 +1,6 @@
 name: Build resume html
-on: [pull_request]
+on: 
+  pull_request:
   push: 
     branches: 
       - main
@@ -9,4 +10,4 @@ jobs:
     runs-on: ubuntu-20.04
     container: yupiter/my-resume
     steps:
-        run: make build_html
+      - run: make build_html
