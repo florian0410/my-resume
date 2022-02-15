@@ -169,7 +169,7 @@
       "url": "",
       "startDate": "2020-09-01",
       "endDate": "2021-12-01",
-      "summary": "Les problématiques principales de cette mission consistaient à migrer un ensemble d'applications sur le Cloud AWS et assurer un déploiement automatisé et continues de celle-ci.",
+      "summary": "The main objectives of this mission were to migrate a set of applications on the AWS Cloud and ensure an automated and continuous deployment of it",
       "skillsUsed":"Terraform, Packer, Bash, Gitlab, Gitlab CI, Ansible, Docker, Pre-commit, Linux, Windows server, SSH, AWS SSM, AWS ELB, AWS EC2, AWS Elastic Beanstalk, AWS ECR, GitOps",
       "highlights": [
         "Developing automations to build Cloud machine images using Packer, Ansible and Gitlab CI",
