@@ -1,0 +1,9 @@
+name: Build resume html
+on: [push]
+
+jobs:
+  build_resume:
+    runs-on: ubuntu-20.04
+    container: yupiter/my-resume
+    steps:
+        run: make build_html
