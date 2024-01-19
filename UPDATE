@@ -1,32 +1,39 @@
-Au sein du centre de compétence AWS de Axa, j'ai participé au développement de nouvelles fonctionnalités et améliorations des automatisations autour de la Landing Zone AWS.
-J'ai aussi activement travaillé autour du programme Atlas afin de créer plusieurs automatisations qui permettent la migration de multiples applications VMs dans des Datacenters vers le cloud pour différents clients d'Axa GO.
-Cette mission s'accompagnait aussi de la préparation à la mise en place d'une initiative SRE afin d'assurer un support continu des solutions livrées.
+Au sein du centre de compétence AWS, ma mission consiste à, préparer la mise en place d'une initiative SRE au sein de l'équipe, contribuer activement à l'évolution de la Landing Zone AWS d'Axa, et participé au développement de nouvelles fonctionnalités sur le programme Atlas et sa plateforme innovante MPI: Managed Public IaaS.
 
 Parmis les points clés de cette mission:
 - Développement d'automatisations et nouvelles fonctionnalités autour de la landing Zone AWS Axa ainsi que pour le programme Atlas
 - Production et dissertation de schémas d'architecture technique à bas et haut niveau au sein de l'équipe 
 - Ecriture d'un rapport d'étonnement afin d'établir les points d'amélioration qui orienteraient la mission
 - Refonte et communication d'une nouvelle méthodologie de travail Git pour l'ensemble des développeurs internes ou externes à l'équipe, le tout afin de fluidifer les développements et simplifier les release. Ma plus grande fierté sur cette mission bien qu'il reste des axes d'améliorations certains.
+- Animation de réunions d'innovation et brainstorming
 - Création, revue et amélioration de la documentation globale de l'équipe 
 - Participation appuyée à l'installation de la méthodologie Safe agile au sein de l'équipe
 - Création d'un community of practice pour permettre aux développeurs de partager diverses connaissance peu importe les sujets
 
 Compétences mise en oeuvre
 	AWS ServiceCatalog, Cloudformation
-	AWS EC2, S3, Cloudwatch, FSX, Cloudwatch Event, Lambda, CodeCommit, CodePipeline, IAM, Organizations, step functions, Session Manager
+	AWS EC2, S3, Cloudwatch, FSX, Cloudwatch Event, Lambda, CodeCommit, CodePipeline, IAM, Organizations, step functions, Session Manager, Backup
 	Python
 	Terraform + Terraform enterprise
 	Github enteprise
 	Atlassian: JIRA Server, Confluence
 
-Après 1 an dans la mission, mon rôle à évolué de développeur à membre de l'équipe SRE toujours dans l'équipe AWS. L'objectif de cette équipe étant d'assurer le support et l'amélioration continue des solutions délivrées ainsi que de challenger les équipes de developpement au quotidien en fonction des incidents et problèmes remontés. Mon expérience passée dans les équipes de développement me permettent d'apporter un support de qualité et garder un lien fort avec elles et apportent une vraie valeur au client dans la résolution des problèmes ainsi que dans les remontées et corrections de problèmes.
+Environnement de travail
+  Méthodologie Safe Agile
+  Anglais
 
-Parmis les diffférents actions que j'ai pu y mener:
+Après 1 an , j'ai évolué dans un rôle clé en rejoignant la création de l'équipe SRE du centre de compétence. Son objectif étant d'assurer le support et l'amélioration continue des solutions délivrées. Le tout en challengeant quotidiennement les développeurs en réponse aux incidents et problèmes remontés. Fort de mon expérience initiale,  j'ai apporté un support de qualité dans la résolution des problèmes et la communication clientes. J'ai également fortement encouragé l'établissement d'une relation transparente entre les clients et notre équipe, renforçant ainsi notre confiance mutuelle.
+
+Parmis les différentes actions que j'ai pu y mener:
 - Support avancés des entités clientes
 - Ecriture de Post mortem sur des incidents complexes/critiques pour remédiation ou bugfix côté développeurs
-- Développement de correctif adhoc/direct
+- Développement de correctif et évolution pour supporter les équipes de développements
+- Point régulier avec les développeurs pour garder une connexion avec les problèmatiques clientes et orienter certains développements
 - Suivi et résolution de problème complexes sur une durée prolongée (plusieurs mois)
+- Participation à des points de suivi hebdomadaire avec les représentants Cloud de nombreuses régions dans le monde (France à Japon)
+- Intervention sur place pour un support avancé d'un mois dans l'entité Japonaise
 
 Compétences additionelles mises en oeuvre
-	AWS Athena, QuickSight, Cloudtrail, Cloud9 
+	AWS Athena, QuickSight, Cloudtrail, Cloud9, support
+  Github runners
 	
