@@ -44,4 +44,4 @@ from-gitconnected:
 
 # Only with official supported templates
 serve-resume:
-	resume serve --theme $(JSON_RESUME_THEME) -r $(SOURCE_FILE)
+	resume serve --theme $(JSON_RESUME_THEME) -r $(SOURCE_FILE_FRENCH)
