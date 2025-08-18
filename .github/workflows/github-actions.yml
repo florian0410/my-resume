@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   build_resume:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04 # NOTE : If runner are in queue, update image to fix
     container: 
       image: yupiter/my-resume
       options: --user 1001 # github actions user since default is node
