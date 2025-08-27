@@ -89,7 +89,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment PR with dev link
         if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
@@ -98,8 +98,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
+            <!-- pr-preview-link -->
             🚀 La version de développement de cette PR est disponible ici :  
             [PR #${{ github.event.pull_request.number }}](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/)
+          body-includes: "<!-- pr-preview-link -->"
+          edit-mode: replace
 
   cleanup_pr:
     if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
