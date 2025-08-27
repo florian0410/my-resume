@@ -1,6 +1,8 @@
 DEPLOY_DIR ?= deploy
 TARGET_DIR ?= $(DEPLOY_DIR)/prod
 
+.PHONY: docker_build docker_run docker_push install-env fix-chrome-missing install-theme build_html build_pdf from-gitconnected serve-resume generate_indexes deploy_all
+
 DOCKER_IMAGE_NAME=yupiter/my-resume
 JSON_RESUME_THEME=paper-plus-plus
 FILENAME=resume
