@@ -61,18 +61,16 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             TARGET_DIR="${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
-            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # TARGET_DIR disponible dans les steps suivantes
+            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
           else
             TARGET_DIR="${{ env.DEPLOY_DIR }}/prod"
-            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # TARGET_DIR disponible dans les steps suivantes
+            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
           fi
-      
           rm -rf "$TARGET_DIR"
           mkdir -p "$TARGET_DIR"
           cp -r "${{ env.DOCS_DIR }}/"* "$TARGET_DIR"
           echo "Fichiers copiés dans $TARGET_DIR :"
           ls -la "$TARGET_DIR"
-        
 
       - name: Generate indexes
         run: |
@@ -83,11 +81,15 @@ jobs:
             ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "${{ env.TARGET_DIR }}"
           fi
 
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ env.TARGET_DIR }}
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.DEPLOY_DIR }}
 
       - name: Comment PR with dev link
         if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
