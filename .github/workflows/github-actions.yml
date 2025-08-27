@@ -25,9 +25,10 @@ jobs:
       - name: Build HTML FR/EN in Docker
         run: |
           mkdir -p docs
-          docker run --rm -v ${{ github.workspace }}:/data -w /data \
+          docker run --rm -v ${{ github.workspace }}:/data -v /tmp/.npm-cache:/tmp/.npm-cache -w /data \
             -e NPM_CONFIG_CACHE=/tmp/.npm-cache \
             yupiter/my-resume make PAGES_FOLDER=docs build_html
+
 
       # Upload artifact outside the container
       - name: Upload artifact
