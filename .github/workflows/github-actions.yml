@@ -49,17 +49,18 @@ jobs:
 
       - name: Prepare deployment folder
         run: |
-          echo "BASE_DIR=deploy" >> "$GITHUB_ENV"
+          echo "BASE_DIR=$GITHUB_WORKSPACE/deploy" >> "$GITHUB_ENV"
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "TARGET_DIR=deploy/dev/pr-${{ github.event.pull_request.number }}" >> "$GITHUB_ENV"
-            rm -rf "deploy/dev/pr-${{ github.event.pull_request.number }}"
-            mkdir -p "deploy/dev/pr-${{ github.event.pull_request.number }}"
+            echo "TARGET_DIR=$GITHUB_WORKSPACE/deploy/dev/pr-${{ github.event.pull_request.number }}" >> "$GITHUB_ENV"
+            rm -rf "$GITHUB_WORKSPACE/deploy/dev/pr-${{ github.event.pull_request.number }}"
+            mkdir -p "$GITHUB_WORKSPACE/deploy/dev/pr-${{ github.event.pull_request.number }}"
           else
-            echo "TARGET_DIR=deploy/prod" >> "$GITHUB_ENV"
-            rm -rf "deploy/prod"
-            mkdir -p "deploy/prod"
+            echo "TARGET_DIR=$GITHUB_WORKSPACE/deploy/prod" >> "$GITHUB_ENV"
+            rm -rf "$GITHUB_WORKSPACE/deploy/prod"
+            mkdir -p "$GITHUB_WORKSPACE/deploy/prod"
           fi
-          cp -r docs/* "$TARGET_DIR/"
+          cp -r "$GITHUB_WORKSPACE/docs/"* "$TARGET_DIR/"
+          echo "Files copied to: $TARGET_DIR"
           ls -la "$TARGET_DIR/"
 
       - name: Generate indexes via Makefile
