@@ -16,6 +16,7 @@ For base json file: https://jsonresume.org/getting-started/, we will use this ba
 [] Update cli to new third party https://github.com/rbardini/resumed
 [] Add an open source editor to ease resume creation
   - Validate version would create a PR ?
+[] Docker builder feature to execute for each DockerFile change(template management+version management)
 [] Link to my resume on webpage
 [x] Make repo public and keep gh-page public
 [] Add a json-resume validator

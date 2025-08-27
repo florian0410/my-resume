@@ -59,7 +59,8 @@ jobs:
             rm -rf "deploy/prod"
             mkdir -p "deploy/prod"
           fi
-          mv docs/* "$TARGET_DIR/"
+          cp -r docs/* "$TARGET_DIR/"
+          ls -la "$TARGET_DIR/"
 
       - name: Generate indexes via Makefile
         run: make DEPLOY_DIR="$BASE_DIR" TARGET_DIR="$TARGET_DIR" deploy_all
