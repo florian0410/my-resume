@@ -47,17 +47,27 @@ jobs:
 
       - name: Prepare deployment folder
         run: |
-          echo "BASE_DIR=$GITHUB_WORKSPACE/deploy" >> "$GITHUB_ENV"
+          # Définir les dossiers de base et cible en variables locales
+          BASE_DIR="$GITHUB_WORKSPACE/deploy"
+
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "TARGET_DIR=$GITHUB_WORKSPACE/deploy/dev/pr-${{ github.event.pull_request.number }}" >> "$GITHUB_ENV"
-            rm -rf "$GITHUB_WORKSPACE/deploy/dev/pr-${{ github.event.pull_request.number }}"
-            mkdir -p "$GITHUB_WORKSPACE/deploy/dev/pr-${{ github.event.pull_request.number }}"
+            TARGET_DIR="$BASE_DIR/dev/pr-${{ github.event.pull_request.number }}"
+            echo "Deployment PR vers $TARGET_DIR"
           else
-            echo "TARGET_DIR=$GITHUB_WORKSPACE/deploy/prod" >> "$GITHUB_ENV"
-            rm -rf "$GITHUB_WORKSPACE/deploy/prod"
-            mkdir -p "$GITHUB_WORKSPACE/deploy/prod"
+            TARGET_DIR="$BASE_DIR/prod"
+            echo "Deployment prod vers $TARGET_DIR"
           fi
+
+          # Nettoyer et recréer le dossier cible
+          rm -rf "$TARGET_DIR"
+          mkdir -p "$TARGET_DIR"
+
+          # Copier les fichiers générés
           cp -r "$GITHUB_WORKSPACE/docs/"* "$TARGET_DIR/"
+
+          # Vérifier le contenu copié
+          echo "Fichiers copiés dans $TARGET_DIR :"
+          ls -la "$TARGET_DIR"
 
       - name: Generate indexes via Makefile
         run: |
