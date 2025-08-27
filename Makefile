@@ -62,3 +62,7 @@ generate_indexes:
 
 # --- Build complet pour déploiement ---
 deploy_all: build_html generate_indexes
+
+# --- Build complet pour déploiement PR (ne modifie pas index global) ---
+deploy_pr: build_html
+	./scripts/generate_indexes.sh $(DEPLOY_DIR) $(TARGET_DIR) --no-global

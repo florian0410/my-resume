@@ -1,24 +1,26 @@
 name: Build and Deploy Resume HTML
 
-# Déclenchement du workflow
 on:
   push:
     branches:
       - main
   pull_request:
-    types: [opened, synchronize, closed] # opened = PR créée, synchronize = push sur PR, closed = cleanup  workflow_dispatch:
+    types: [opened, synchronize, closed]
+  workflow_dispatch:
+
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# --- Job de build et déploiement ---
 jobs:
   build_resume:
     runs-on: ubuntu-24.04 # NOTE : If runner are in queue, update image to fix
-    container: 
+    container:
       image: yupiter/my-resume
       options: --user 1001 # github actions user since default is node
     steps:
@@ -30,12 +32,11 @@ jobs:
           name: resume-html
           path: docs/
 
-
   deploy:
     needs: build_resume
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Download build artifact
@@ -43,9 +44,6 @@ jobs:
         with:
           name: resume-html
           path: docs/
-
-      - name: Fix file permissions
-        run: chmod -R 755 docs/
 
       - name: Prepare deployment folder
         run: |
@@ -60,11 +58,14 @@ jobs:
             mkdir -p "$GITHUB_WORKSPACE/deploy/prod"
           fi
           cp -r "$GITHUB_WORKSPACE/docs/"* "$TARGET_DIR/"
-          echo "Files copied to: $TARGET_DIR"
-          ls -la "$TARGET_DIR/"
 
       - name: Generate indexes via Makefile
-        run: make DEPLOY_DIR="$BASE_DIR" TARGET_DIR="$TARGET_DIR" deploy_all
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            make DEPLOY_DIR="$BASE_DIR" TARGET_DIR="$TARGET_DIR" deploy_pr
+          else
+            make DEPLOY_DIR="$BASE_DIR" TARGET_DIR="$TARGET_DIR" deploy_all
+          fi
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -73,7 +74,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy
 
-      # Comment with dev link at opening
       - name: Comment PR with dev link
         if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
         uses: peter-evans/create-or-update-comment@v4
@@ -84,17 +84,22 @@ jobs:
             🚀 La version de développement de cette PR est disponible ici :  
             [PR #${{ github.event.pull_request.number }}](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/)
 
-# --- Job cleanup closed PR  ---
   cleanup_pr:
     if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
     runs-on: ubuntu-latest
+    needs: build_resume
     steps:
       - uses: actions/checkout@v4
       - name: Remove PR deploy folder
         run: |
-          BASE_DIR=deploy
+          BASE_DIR=$GITHUB_WORKSPACE/deploy
           TARGET_DIR="$BASE_DIR/dev/pr-${{ github.event.pull_request.number }}"
           if [ -d "$TARGET_DIR" ]; then
             echo "Supprimer les pages de la PR #${{ github.event.pull_request.number }}"
             rm -rf "$TARGET_DIR"
           fi
+      - name: Redeploy after cleanup
+        uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
