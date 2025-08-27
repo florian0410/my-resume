@@ -17,23 +17,17 @@ concurrency:
 # --- Job de build et déploiement ---
 jobs:
   build_resume:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # NOTE : If runner are in queue, update image to fix
+    container: 
+      image: yupiter/my-resume
+      options: --user 1001 # github actions user since default is node
     steps:
       - uses: actions/checkout@v4
-
-      # Run the prebuilt Docker image from Docker Hub
-      - name: Build HTML FR/EN in Docker
-        run: |
-          mkdir -p docs
-          docker run --rm -v ${{ github.workspace }}:/data -w /data \
-            yupiter/my-resume make PAGES_FOLDER=docs deploy_all
-
-
-      # Upload artifact outside the container
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - run: make build_html
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: page-build
+          name: resume-html
           path: docs/
 
 
@@ -46,7 +40,7 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: page-build
+          name: resume-html
           path: docs/
 
       - name: Prepare deployment folder
