@@ -60,16 +60,19 @@ jobs:
       - name: Prepare deployment folder
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "TARGET_DIR=${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            TARGET_DIR="${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
+            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # TARGET_DIR disponible dans les steps suivantes
           else
-            echo "TARGET_DIR=${{ env.DEPLOY_DIR }}/prod" >> $GITHUB_ENV
+            TARGET_DIR="${{ env.DEPLOY_DIR }}/prod"
+            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # TARGET_DIR disponible dans les steps suivantes
           fi
-          mkdir -p "${{ env.TARGET_DIR }}"
-          rm -rf "${{ env.TARGET_DIR }}"
-          mkdir -p "${{ env.TARGET_DIR }}"
-          cp -r "${{ env.DOCS_DIR }}/"* "${{ env.TARGET_DIR }}"
-          echo "Fichiers copiés dans ${{ env.TARGET_DIR }} :"
-          ls -la "${{ env.TARGET_DIR }}"
+      
+          rm -rf "$TARGET_DIR"
+          mkdir -p "$TARGET_DIR"
+          cp -r "${{ env.DOCS_DIR }}/"* "$TARGET_DIR"
+          echo "Fichiers copiés dans $TARGET_DIR :"
+          ls -la "$TARGET_DIR"
+        
 
       - name: Generate indexes
         run: |
