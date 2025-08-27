@@ -19,22 +19,24 @@ concurrency:
 # --- Job de build et déploiement ---
 jobs:
   build_resume:
-    if: ${{ github.event_name != 'pull_request' || github.event.action == 'opened' }}
     runs-on: ubuntu-latest
-    container:
-      image: yupiter/my-resume
-      options: --user 1001
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build HTML via Makefile
-        run: make PAGES_FOLDER=docs build_html
+      # Run the prebuilt Docker image from Docker Hub
+      - name: Build HTML FR/EN in Docker
+        run: |
+          mkdir -p docs
+          docker run --rm -v ${{ github.workspace }}:/data -w /data yupiter/my-resume \
+            make PAGES_FOLDER=docs build_html
 
+      # Upload artifact outside the container
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
           name: page-build
           path: docs/
+
 
   deploy:
     needs: build_resume
