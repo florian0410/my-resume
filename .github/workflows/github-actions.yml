@@ -44,6 +44,9 @@ jobs:
           name: resume-html
           path: docs/
 
+      - name: Fix file permissions
+        run: chmod -R 755 docs/
+
       - name: Prepare deployment folder
         run: |
           echo "BASE_DIR=deploy" >> "$GITHUB_ENV"
