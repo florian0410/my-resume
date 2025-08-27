@@ -17,6 +17,15 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  WORKSPACE: ${{ github.workspace }}
+  DEPLOY_DIR: ${{ github.workspace }}/deploy
+  DOCS_DIR: ${{ github.workspace }}/docs
+  JSON_RESUME_THEME: paper-plus-plus
+  OUTFILE_ENGLISH: resume-EN
+  OUTFILE_FRENCH: resume-FR
+  TARGET_DIR: ""  # sera défini dynamiquement via $GITHUB_ENV
+
 jobs:
   build_resume:
     runs-on: ubuntu-24.04 # NOTE : If runner are in queue, update image to fix
@@ -25,66 +34,56 @@ jobs:
       options: --user 1001 # github actions user since default is node
     steps:
       - uses: actions/checkout@v4
-      - run: make build_html
+
+      - name: Build HTML
+        run: make build_html
+
       - name: Upload HTML artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume-html
-          path: docs/
+          path: ${{ env.DOCS_DIR }}/
 
   deploy:
     needs: build_resume
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
+    environment: github-pages
     steps:
       - uses: actions/checkout@v4
+
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: resume-html
-          path: docs/
+          path: ${{ env.DOCS_DIR }}/
 
       - name: Prepare deployment folder
         run: |
-          # Définir les dossiers de base et cible en variables locales
-          BASE_DIR="$GITHUB_WORKSPACE/deploy"
-
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            TARGET_DIR="$BASE_DIR/dev/pr-${{ github.event.pull_request.number }}"
-            echo "Deployment PR vers $TARGET_DIR"
+            echo "TARGET_DIR=${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
           else
-            TARGET_DIR="$BASE_DIR/prod"
-            echo "Deployment prod vers $TARGET_DIR"
+            echo "TARGET_DIR=${{ env.DEPLOY_DIR }}/prod" >> $GITHUB_ENV
           fi
-
-          # Nettoyer et recréer le dossier cible
-          rm -rf "$TARGET_DIR"
-          mkdir -p "$TARGET_DIR"
-
-          # Copier les fichiers générés
-          cp -r "$GITHUB_WORKSPACE/docs/"* "$TARGET_DIR/"
-
-          # Vérifier le contenu copié
-          echo "Fichiers copiés dans $TARGET_DIR :"
-          ls -la "$TARGET_DIR"
+          mkdir -p "${{ env.TARGET_DIR }}"
+          rm -rf "${{ env.TARGET_DIR }}"
+          mkdir -p "${{ env.TARGET_DIR }}"
+          cp -r "${{ env.DOCS_DIR }}/"* "${{ env.TARGET_DIR }}"
+          echo "Fichiers copiés dans ${{ env.TARGET_DIR }} :"
+          ls -la "${{ env.TARGET_DIR }}"
 
       - name: Generate indexes
         run: |
-          ls -al ./scripts
-          chmod +x "./scripts/generate_indexes.sh"
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "$TARGET_DIR" --no-global
+            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "${{ env.TARGET_DIR }}" --no-global
           else
-            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "$TARGET_DIR"
+            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "${{ env.TARGET_DIR }}"
           fi
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy
+          publish_dir: ${{ env.DEPLOY_DIR }}
 
       - name: Comment PR with dev link
         if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
@@ -102,16 +101,17 @@ jobs:
     needs: build_resume
     steps:
       - uses: actions/checkout@v4
+
       - name: Remove PR deploy folder
         run: |
-          BASE_DIR=$GITHUB_WORKSPACE/deploy
-          TARGET_DIR="$BASE_DIR/dev/pr-${{ github.event.pull_request.number }}"
+          TARGET_DIR="${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
           if [ -d "$TARGET_DIR" ]; then
             echo "Supprimer les pages de la PR #${{ github.event.pull_request.number }}"
             rm -rf "$TARGET_DIR"
           fi
-      - name: Redeploy after cleanup
+
+      - name: Redeploy GitHub Pages after cleanup
         uses: actions/deploy-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy
+          publish_dir: ${{ env.DEPLOY_DIR }}
