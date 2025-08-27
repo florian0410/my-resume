@@ -69,12 +69,12 @@ jobs:
           echo "Fichiers copiés dans $TARGET_DIR :"
           ls -la "$TARGET_DIR"
 
-      - name: Generate indexes via Makefile
+      - name: Generate indexes
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            make DEPLOY_DIR="$BASE_DIR" TARGET_DIR="$TARGET_DIR" deploy_pr
+            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "$TARGET_DIR" --no-global
           else
-            make DEPLOY_DIR="$BASE_DIR" TARGET_DIR="$TARGET_DIR" deploy_all
+            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "$TARGET_DIR"
           fi
 
       - name: Deploy to GitHub Pages

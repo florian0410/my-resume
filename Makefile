@@ -1,7 +1,7 @@
 DEPLOY_DIR ?= deploy
 TARGET_DIR ?= $(DEPLOY_DIR)/prod
 
-.PHONY: docker_build docker_run docker_push install-env fix-chrome-missing install-theme build_html build_pdf from-gitconnected serve-resume generate_indexes deploy_all
+.PHONY: docker_build docker_run docker_push install-env fix-chrome-missing install-theme build_html build_pdf from-gitconnected serve-resume generate_indexes
 
 DOCKER_IMAGE_NAME=yupiter/my-resume
 JSON_RESUME_THEME=paper-plus-plus
@@ -54,15 +54,3 @@ from-gitconnected:
 serve-resume:
 	resume serve --theme $(JSON_RESUME_THEME) -r $(SOURCE_FILE_FRENCH)
 
-# --- Build indexes individuels et globaux ---
-# TARGET_DIR = dossier individuel PR ou prod, ex: deploy/dev/pr-123 ou deploy/prod
-# DEPLOY_DIR = dossier racine pour les déploiements, ex: deploy
-generate_indexes:
-	./scripts/generate_indexes.sh $(DEPLOY_DIR) $(TARGET_DIR)
-
-# --- Build complet pour déploiement ---
-deploy_all: build_html generate_indexes
-
-# --- Build complet pour déploiement PR (ne modifie pas index global) ---
-deploy_pr: build_html
-	./scripts/generate_indexes.sh $(DEPLOY_DIR) $(TARGET_DIR) --no-global
