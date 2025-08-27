@@ -26,7 +26,7 @@ jobs:
         run: |
           mkdir -p docs
           docker run --rm -v ${{ github.workspace }}:/data -w /data \
-            -e NPM_CONFIG_CACHE=/data/.npm-cache \
+            -e NPM_CONFIG_CACHE=/tmp/.npm-cache \
             yupiter/my-resume make PAGES_FOLDER=docs build_html
 
       # Upload artifact outside the container
