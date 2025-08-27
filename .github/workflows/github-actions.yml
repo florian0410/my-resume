@@ -1,32 +1,76 @@
-name: Build resume html
-on: 
+name: Build and Deploy Resume HTML
+
+on:
   pull_request:
-  push: 
-    branches: 
+    branches:
+      - main
+  push:
+    branches:
       - main
   workflow_dispatch:
 
 permissions:
-  # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
   contents: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
   build_resume:
-    runs-on: ubuntu-24.04 # NOTE : If runner are in queue, update image to fix
-    container: 
+    runs-on: ubuntu-latest
+    container:
       image: yupiter/my-resume
-      options: --user 1001 # github actions user since default is node
+      options: --user 1001
     steps:
       - uses: actions/checkout@v4
-      - run: make build_html
-      - uses: stefanzweifel/git-auto-commit-action@v6 # Push html resulting files
-        with:
-          commit_message: "Upload html files to repo"
-          file_pattern: docs/*
 
+      - name: Build HTML via Makefile
+        run: make PAGES_FOLDER=docs build_html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          name: page-build
+          path: docs/
+
+  deploy:
+    needs: build_resume
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: page-build
+          path: docs/
+
+      - name: Prepare deployment folder
+        run: |
+          BASE_DIR=deploy
+          mkdir -p $BASE_DIR
+
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            TARGET_DIR="$BASE_DIR/dev/pr-${{ github.event.pull_request.number }}"
+            if [ -d "$TARGET_DIR" ]; then
+              echo "Supprimer l'ancien build PR #${{ github.event.pull_request.number }}"
+              rm -rf "$TARGET_DIR"
+            fi
+          else
+            TARGET_DIR="$BASE_DIR/prod"
+            rm -rf "$TARGET_DIR"
+          fi
+
+          mkdir -p "$TARGET_DIR"
+          mv docs/* "$TARGET_DIR/"
+
+      - name: Generate indexes via Makefile
+        run: make DEPLOY_DIR="$BASE_DIR" TARGET_DIR="$TARGET_DIR" deploy_all
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
