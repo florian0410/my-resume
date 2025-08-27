@@ -71,7 +71,7 @@ jobs:
 
       - name: Generate indexes
         run: |
-          chmod +x ./scripts/generate_indexes.sh 
+          chmod +x "./scripts/generate_indexes.sh"
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "$TARGET_DIR" --no-global
           else
