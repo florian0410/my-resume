@@ -25,8 +25,8 @@ jobs:
       - name: Build HTML FR/EN in Docker
         run: |
           mkdir -p docs
-          docker run --rm -v ${{ github.workspace }}:/data -w /data yupiter/my-resume \
-            make PAGES_FOLDER=docs build_html
+          docker run --rm -v ${{ github.workspace }}:/data -w /data --user $(id -u):$(id -g) \
+          yupiter/my-resume make PAGES_FOLDER=docs build_html
 
       # Upload artifact outside the container
       - name: Upload artifact
