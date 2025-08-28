@@ -1,32 +1,72 @@
-name: Build resume html
-on: 
-  pull_request:
-  push: 
-    branches: 
+name: Build and Deploy Resume HTML
+
+on:
+  push:
+    branches:
       - main
+  pull_request:
+    types: [opened, synchronize]
   workflow_dispatch:
 
 permissions:
-  # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
   contents: write
+  id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  WORKSPACE: ${{ github.workspace }}
+  DOCS_DIR: ${{ github.workspace }}/docs
+  JSON_RESUME_THEME: paper-plus-plus
+  OUTFILE_ENGLISH: resume-EN
+  OUTFILE_FRENCH: resume-FR
+
 jobs:
   build_resume:
     runs-on: ubuntu-24.04 # NOTE : If runner are in queue, update image to fix
-    container: 
+    container:
       image: yupiter/my-resume
       options: --user 1001 # github actions user since default is node
     steps:
       - uses: actions/checkout@v4
-      - run: make build_html
-      - uses: stefanzweifel/git-auto-commit-action@v6 # Push html resulting files
-        with:
-          commit_message: "Upload html files to repo"
-          file_pattern: docs/*
 
+      - name: Build HTML
+        run: make build_html
+
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-html
+          path: ${{ env.DOCS_DIR }}/        
+
+
+  deploy:
+    runs-on: ubuntu-24.04
+    needs: build_resume
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: resume-html
+          path: ${{ env.DOCS_DIR }}/
+
+      - name: Générer index.html pour EN/FR via script shell
+        run: |
+          chmod +x ./scripts/generate_indexes.sh
+          ./scripts/generate_indexes.sh "${{ env.DOCS_DIR }}" "${{ env.DOCS_DIR }}"
+
+      # Only deploy on main branch
+      - name: Upload GitHub Pages artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ env.DOCS_DIR }}
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@v4
