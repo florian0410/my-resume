@@ -35,6 +35,30 @@ jobs:
       - name: Build HTML
         run: make build_html
 
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-html
+          path: ${{ env.DOCS_DIR }}/        
+
+
+  deploy:
+    runs-on: ubuntu-24.04
+    environment: github-pages    
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: resume-html
+          path: ${{ env.DOCS_DIR }}/
+
+      - name: Générer index.html pour EN/FR via script shell
+        run: |
+          chmod +x ./scripts/generate_indexes.sh
+          ./scripts/generate_indexes.sh "${{ env.DOCS_DIR }}" "${{ env.DOCS_DIR }}"
+
       # Only deploy on main branch
       - name: Upload GitHub Pages artifact
         if: github.ref == 'refs/heads/main'
