@@ -21,12 +21,12 @@ concurrency:
 
 env:
   WORKSPACE: ${{ github.workspace }}
-  DEPLOY_DIR: ${{ github.workspace }}/deploy
+  TARGET_DIR: ${{ github.workspace }}/target
   DOCS_DIR: ${{ github.workspace }}/docs
   JSON_RESUME_THEME: paper-plus-plus
   OUTFILE_ENGLISH: resume-EN
   OUTFILE_FRENCH: resume-FR
-  TARGET_DIR: ""  # sera défini dynamiquement via $GITHUB_ENV
+  DEPLOY_DIR: ""  # automatically defined via $GITHUB_ENV # Where the final github page content should be located before publishing
 
 jobs:
   build_resume:
@@ -59,28 +59,34 @@ jobs:
           name: resume-html
           path: ${{ env.DOCS_DIR }}/
 
+      # Always copy /docs to prod folder before preparing deployment
+      - name: Prepare prod folder from /docs/
+        run: |
+          mkdir -p "${{ env.TARGET_DIR }}/prod"
+          cp -r "${{ env.DOCS_DIR }}/." "${{ env.TARGET_DIR }}/prod/"
+
       - name: Prepare deployment folder
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            TARGET_DIR="${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
-            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
+            DEPLOY_DIR="${{ env.TARGET_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
+            echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_ENV
+            rm -rf "$DEPLOY_DIR"
+            mkdir -p "$DEPLOY_DIR"
+            cp -r "${{ env.DOCS_DIR }}/"* "$DEPLOY_DIR"
+            echo "Fichiers copiés dans $DEPLOY_DIR :"
+            ls -la "$DEPLOY_DIR"
           else
-            TARGET_DIR="${{ env.DEPLOY_DIR }}/prod"
-            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
+            # On main, prod is already prepared above
+            echo "Production deployment, prod folder already prepared."
           fi
-          rm -rf "$TARGET_DIR"
-          mkdir -p "$TARGET_DIR"
-          cp -r "${{ env.DOCS_DIR }}/"* "$TARGET_DIR"
-          echo "Fichiers copiés dans $TARGET_DIR :"
-          ls -la "$TARGET_DIR"
 
-      - name: Generate indexes
+      - name: Generate indexes (prod only)
         run: |
           chmod +x ./scripts/generate_indexes.sh
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "${{ env.TARGET_DIR }}" --no-global
+            ./scripts/generate_indexes.sh "${{ env.TARGET_DIR }}" "${{ env.DEPLOY_DIR }}" --no-global
           else
-            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "${{ env.TARGET_DIR }}"
+            ./scripts/generate_indexes.sh "${{ env.TARGET_DIR }}" "${{ env.DEPLOY_DIR }}"
           fi
 
       - name: Upload GitHub Pages artifact
@@ -90,6 +96,14 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+
+      # On main, update /docs with the new build after successful deployment
+      - name: Update /docs with new prod build
+        if: github.ref == 'refs/heads/main'
+        run: |
+          rm -rf "${{ env.DOCS_DIR }}"
+          mkdir -p "${{ env.DOCS_DIR }}"
+          cp -r "${{ env.TARGET_DIR }}/prod/." "${{ env.DOCS_DIR }}/"
 
       - name: Find Comment
         if: ${{ github.event_name == 'pull_request' }}
@@ -108,8 +122,10 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             <!-- pr-preview-link -->
-            🚀 PR development version is available here :  
-            [PR #${{ github.event.pull_request.number }}](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/)
+            🚀 PR development version is available here:
+
+            - [FR version](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/resume-FR.html)
+            - [EN version](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/resume-EN.html)
           edit-mode: replace
 
   cleanup_pr:
@@ -121,14 +137,14 @@ jobs:
 
       - name: Remove PR deploy folder
         run: |
-          TARGET_DIR="${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
-          if [ -d "$TARGET_DIR" ]; then
+          DEPLOY_DIR="${{ env.TARGET_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
+          if [ -d "$DEPLOY_DIR" ]; then
             echo "Supprimer les pages de la PR #${{ github.event.pull_request.number }}"
-            rm -rf "$TARGET_DIR"
+            rm -rf "$DEPLOY_DIR"
           fi
 
       - name: Redeploy GitHub Pages after cleanup
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.DEPLOY_DIR }}
+          publish_dir: ${{ env.TARGET_DIR }}
