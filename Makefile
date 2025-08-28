@@ -1,5 +1,5 @@
-DEPLOY_DIR ?= deploy
-TARGET_DIR ?= $(DEPLOY_DIR)/prod
+TARGET_DIR ?= deploy
+DEPLOY_DIR ?= $(TARGET_DIR)/prod
 
 .PHONY: docker_build docker_run docker_push install-env fix-chrome-missing install-theme build_html build_pdf from-gitconnected serve-resume generate_indexes
 
