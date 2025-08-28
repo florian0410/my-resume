@@ -44,7 +44,8 @@ jobs:
 
   deploy:
     runs-on: ubuntu-24.04
-    environment: github-pages    
+    needs: build_resume
+    environment: github-pages
     steps:
       - uses: actions/checkout@v4
 
