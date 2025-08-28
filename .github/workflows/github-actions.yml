@@ -86,7 +86,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ${{ env.DEPLOY_DIR }}
+          path: ${{ env.TARGET_DIR }}
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
@@ -108,10 +108,8 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             <!-- pr-preview-link -->
-            🚀 PR development version is available here:
-
-            - [FR version](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/resume-FR.html)
-            - [EN version](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/resume-EN.html)
+            🚀 PR development version is available here :  
+            [PR #${{ github.event.pull_request.number }}](https://${{ github.repository_owner }}.github.io/${{ github.repository }}/dev/pr-${{ github.event.pull_request.number }}/)
           edit-mode: replace
 
   cleanup_pr:
