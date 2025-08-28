@@ -1,19 +1,19 @@
 #!/bin/bash
-# Usage: ./generate_indexes.sh BASE_DIR DEPLOY_DIR [--no-global]
+# Usage: ./generate_indexes.sh BASE_DIR TARGET_DIR [--no-global]
 # BASE_DIR = dossier racine deploy (ex: deploy)
-# DEPLOY_DIR = dossier individuel PR ou prod (ex: deploy/dev/pr-123 ou deploy/prod)
+# TARGET_DIR = dossier individuel PR ou prod (ex: deploy/dev/pr-123 ou deploy/prod)
 
 set -e
 
 BASE_DIR=$1
-DEPLOY_DIR=$2
+TARGET_DIR=$2
 NO_GLOBAL=$3
 
 # --- Langues disponibles ---
 LANGS=("FR" "EN")
 
 # --- Génération index individuel ---
-mkdir -p "$DEPLOY_DIR"
+mkdir -p "$TARGET_DIR"
 
 echo "<!DOCTYPE html>
 <html lang='fr'>
@@ -23,19 +23,19 @@ echo "<!DOCTYPE html>
 </head>
 <body>
 <h1>Mon CV</h1>
-<p>" > "$DEPLOY_DIR/index.html"
+<p>" > "$TARGET_DIR/index.html"
 
 for lang in "${LANGS[@]}"; do
-  echo "<a href='resume-$lang.html'>$lang</a> | " >> "$DEPLOY_DIR/index.html"
+  echo "<a href='resume-$lang.html'>$lang</a> | " >> "$TARGET_DIR/index.html"
 done
 
-sed -i '$ s/ | $//' "$DEPLOY_DIR/index.html"
+sed -i '$ s/ | $//' "$TARGET_DIR/index.html"
 
 echo "</p>
 </body>
-</html>" >> "$DEPLOY_DIR/index.html"
+</html>" >> "$TARGET_DIR/index.html"
 
-echo "Index individuel généré dans $DEPLOY_DIR/index.html"
+echo "Index individuel généré dans $TARGET_DIR/index.html"
 
 # --- Génération index global uniquement si non PR ---
 if [ "$NO_GLOBAL" != "--no-global" ]; then

@@ -21,12 +21,12 @@ concurrency:
 
 env:
   WORKSPACE: ${{ github.workspace }}
-  TARGET_DIR: ${{ github.workspace }}/target
+  DEPLOY_DIR: ${{ github.workspace }}/deploy
   DOCS_DIR: ${{ github.workspace }}/docs
   JSON_RESUME_THEME: paper-plus-plus
   OUTFILE_ENGLISH: resume-EN
   OUTFILE_FRENCH: resume-FR
-  DEPLOY_DIR: ""  # sera défini dynamiquement via $GITHUB_ENV
+  TARGET_DIR: ""  # sera défini dynamiquement via $GITHUB_ENV
 
 jobs:
   build_resume:
@@ -62,31 +62,31 @@ jobs:
       - name: Prepare deployment folder
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            DEPLOY_DIR="${{ env.TARGET_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
-            echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
+            TARGET_DIR="${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
+            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
           else
-            DEPLOY_DIR="${{ env.TARGET_DIR }}/prod"
-            echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
+            TARGET_DIR="${{ env.DEPLOY_DIR }}/prod"
+            echo "TARGET_DIR=$TARGET_DIR" >> $GITHUB_ENV  # GITHUB_ENV up to date only starting next step
           fi
-          rm -rf "$DEPLOY_DIR"
-          mkdir -p "$DEPLOY_DIR"
-          cp -r "${{ env.DOCS_DIR }}/"* "$DEPLOY_DIR"
-          echo "Fichiers copiés dans $DEPLOY_DIR :"
-          ls -la "$DEPLOY_DIR"
+          rm -rf "$TARGET_DIR"
+          mkdir -p "$TARGET_DIR"
+          cp -r "${{ env.DOCS_DIR }}/"* "$TARGET_DIR"
+          echo "Fichiers copiés dans $TARGET_DIR :"
+          ls -la "$TARGET_DIR"
 
-      - name: Generate indexes (prod only)
+      - name: Generate indexes
         run: |
           chmod +x ./scripts/generate_indexes.sh
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            ./scripts/generate_indexes.sh "${{ env.TARGET_DIR }}" "${{ env.DEPLOY_DIR }}" --no-global
+            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "${{ env.TARGET_DIR }}" --no-global
           else
-            ./scripts/generate_indexes.sh "${{ env.TARGET_DIR }}" "${{ env.DEPLOY_DIR }}"
+            ./scripts/generate_indexes.sh "${{ env.DEPLOY_DIR }}" "${{ env.TARGET_DIR }}"
           fi
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ${{ env.TARGET_DIR }}
+          path: ${{ env.DEPLOY_DIR }}
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
@@ -123,14 +123,14 @@ jobs:
 
       - name: Remove PR deploy folder
         run: |
-          DEPLOY_DIR="${{ env.TARGET_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
-          if [ -d "$DEPLOY_DIR" ]; then
+          TARGET_DIR="${{ env.DEPLOY_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
+          if [ -d "$TARGET_DIR" ]; then
             echo "Supprimer les pages de la PR #${{ github.event.pull_request.number }}"
-            rm -rf "$DEPLOY_DIR"
+            rm -rf "$TARGET_DIR"
           fi
 
       - name: Redeploy GitHub Pages after cleanup
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.TARGET_DIR }}
+          publish_dir: ${{ env.DEPLOY_DIR }}
