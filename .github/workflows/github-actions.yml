@@ -59,34 +59,29 @@ jobs:
           name: resume-html
           path: ${{ env.DOCS_DIR }}/
 
-      # Always copy /docs to prod folder before preparing deployment
-      - name: Prepare prod folder from /docs/
+      # Always copy /docs to root of target for prod before preparing deployment
+      - name: Prepare prod files at root of target
         run: |
-          mkdir -p "${{ env.TARGET_DIR }}/prod"
-          cp -r "${{ env.DOCS_DIR }}/." "${{ env.TARGET_DIR }}/prod/"
+          cp -r "${{ env.DOCS_DIR }}/." "${{ env.TARGET_DIR }}/"
 
-      - name: Prepare deployment folder
+      - name: Prepare deployment folder for PR
+        if: ${{ github.event_name == 'pull_request' }}
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            DEPLOY_DIR="${{ env.TARGET_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
-            echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_ENV
-            rm -rf "$DEPLOY_DIR"
-            mkdir -p "$DEPLOY_DIR"
-            cp -r "${{ env.DOCS_DIR }}/"* "$DEPLOY_DIR"
-            echo "Fichiers copiés dans $DEPLOY_DIR :"
-            ls -la "$DEPLOY_DIR"
-          else
-            # On main, prod is already prepared above
-            echo "Production deployment, prod folder already prepared."
-          fi
+          DEPLOY_DIR="${{ env.TARGET_DIR }}/dev/pr-${{ github.event.pull_request.number }}"
+          echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_ENV
+          rm -rf "$DEPLOY_DIR"
+          mkdir -p "$DEPLOY_DIR"
+          cp -r "${{ env.DOCS_DIR }}/"* "$DEPLOY_DIR"
+          echo "Fichiers copiés dans $DEPLOY_DIR :"
+          ls -la "$DEPLOY_DIR"
 
-      - name: Generate indexes (prod only)
+      - name: Generate indexes
         run: |
           chmod +x ./scripts/generate_indexes.sh
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             ./scripts/generate_indexes.sh "${{ env.TARGET_DIR }}" "${{ env.DEPLOY_DIR }}" --no-global
           else
-            ./scripts/generate_indexes.sh "${{ env.TARGET_DIR }}" "${{ env.DEPLOY_DIR }}"
+            ./scripts/generate_indexes.sh "${{ env.TARGET_DIR }}" "${{ env.TARGET_DIR }}"
           fi
 
       - name: Upload GitHub Pages artifact
@@ -97,13 +92,13 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
 
-      # On main, update /docs with the new build after successful deployment
+      # On main, update /docs with the new prod build after successful deployment
       - name: Update /docs with new prod build
         if: github.ref == 'refs/heads/main'
         run: |
           rm -rf "${{ env.DOCS_DIR }}"
           mkdir -p "${{ env.DOCS_DIR }}"
-          cp -r "${{ env.TARGET_DIR }}/prod/." "${{ env.DOCS_DIR }}/"
+          cp -r "${{ env.TARGET_DIR }}/." "${{ env.DOCS_DIR }}/"
 
       - name: Find Comment
         if: ${{ github.event_name == 'pull_request' }}
@@ -143,8 +138,5 @@ jobs:
             rm -rf "$DEPLOY_DIR"
           fi
 
-      - name: Redeploy GitHub Pages after cleanup
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.TARGET_DIR }}
